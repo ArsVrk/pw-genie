@@ -127,7 +127,10 @@ function fitTrees() {
   const avail = $('#tree-wins').clientWidth || dlg.w;
   // the whole tree visible without scrolling: from its place on the page down to the bottom of the screen
   const top = $('#tree-wins').getBoundingClientRect().top + scrollY;
-  const s = Math.max(0.5, Math.min(1.2, avail / dlg.w, (innerHeight - Math.max(64, top) - 12) / dlg.h));
+  // phones / narrow screens (one column): fit the width, the page scrolls anyway
+  const narrow = innerWidth <= 860;
+  const s = narrow ? Math.max(0.3, Math.min(1.2, avail / dlg.w))
+    : Math.max(0.5, Math.min(1.2, avail / dlg.w, (innerHeight - Math.max(64, top) - 12) / dlg.h));
   wrap.style.width = `${dlg.w * s}px`;
   wrap.style.height = `${dlg.h * s}px`;
   wrap.firstChild.style.transform = `scale(${s})`;

@@ -653,3 +653,41 @@ a.ilink { word-break: break-all; }
 .pbuild .b-foot { flex-wrap: wrap; row-gap: 6px; }
 .pbuild .pb-act { flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
 .c-build { margin-top: 22px; }
+
+/* ---------- phones ---------- */
+@media (max-width: 860px) {
+  #tree-wins { position: static; justify-content: center; }
+  .calc-col2 { align-self: stretch; }
+  .skill-cards { grid-auto-rows: auto; }
+  .sc-body.tooltip { flex: none; }
+}
+@media (max-width: 700px) {
+  .top { flex-wrap: nowrap; gap: .5rem; padding: .4rem 10px; }
+  .brand { font-size: .95rem; flex: none; }
+  .brand img { width: 24px; height: 24px; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs a { padding: .3rem .6rem; font-size: .88rem; white-space: nowrap; flex: none; }
+  main { padding: 10px; }
+  .calc-bar { flex-direction: column; gap: .8rem; padding: 10px 12px; }
+  .calc-bar .tree-filters { width: 100%; }
+  .tf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
+  .tf-row label:not(.chk) { display: flex; flex-direction: column; gap: 2px; font-size: .78rem; color: var(--muted); }
+  .tf-row select { width: 100%; min-width: 0; }
+  .tf-row .chk, .tf-row .count { align-self: center; }
+  .gpick-row { flex-wrap: wrap; }
+  .cards-wrap h2 small { font-size: .8rem; }
+  .pb-filters { display: grid; grid-template-columns: 1fr 1fr; }
+  .pb-filters input[type=search], .pb-filters .btn-link { grid-column: 1 / -1; margin-left: 0; text-align: center; }
+  .builds { grid-template-columns: 1fr; }
+  .g-hero h2 { font-size: 1.5rem; }
+}
+@media (max-width: 700px) {
+  .tf-row label:not(.chk) { text-align: left; align-items: stretch; }
+  /* header: brand on top, the four tabs in one even row */
+  .top { flex-wrap: wrap; row-gap: .35rem; padding: .35rem 10px .45rem; }
+  .tabs { width: 100%; display: grid; grid-template-columns: 1.15fr 1.25fr .7fr 1.05fr; gap: 4px; overflow: visible; }
+  .tabs a { padding: .28rem .2rem; font-size: .82rem; text-align: center; }
+}
+.g-two > *, .g-cards3 > * { min-width: 0; }
+@media (max-width: 700px) { .g-tbl { font-size: .74rem; } .g-tbl th, .g-tbl td { padding: 3px 4px; } .g-box { padding: 12px; } }
