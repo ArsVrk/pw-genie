@@ -40,7 +40,7 @@ const enTxt = (e) => (e === 'all' ? 'вся' : e);
 
 /** Render a game tooltip with ^rrggbb color codes. */
 const CLASS_FIX = [[/кроме/g, 'крім'], [/воинов/g, 'воїнів'], [/воин/g, 'воїн'], [/оборотень/g, 'перевертень'],
-  [/жрец(?!ь)/g, 'жрець'], [/зооморфов\.?/g, 'звіролюдей'], [/друид/g, 'друїд']];
+  [/жрец(?!ь)/g, 'жрець'], [/зооморфов/g, 'зооморфів'], [/друид/g, 'друїд']];
 function renderTooltip(raw, { head: useHead = true } = {}) {
   if (!raw) return '';
   // typos in the game texts: Cyrillic а/е/с inside color codes (e.g. «^ffcb4а»)
@@ -78,8 +78,9 @@ const expToNext = (lvl, factor) => (lvl >= MAX_LEVEL ? 0 : Math.floor(G.player_e
 /* ================= routing ================= */
 function route() {
   const hash = location.hash.slice(1) || 'calc';
+  if (hash === 'presets') { history.replaceState(null, '', '#builds'); return route(); }   // old links
   const [tab, arg] = hash.split('/');
-  const name = ['calc', 'equip', 'presets', 'about', 'skill'].includes(tab) ? tab : 'calc';
+  const name = ['calc', 'equip', 'builds', 'about', 'skill'].includes(tab) ? tab : 'calc';
   const shown = name === 'skill' ? 'calc' : name;   // skill cards open over the calculator
   document.querySelectorAll('.tab').forEach((t) => { t.hidden = t.id !== `tab-${shown}`; });
   document.querySelectorAll('.tabs a').forEach((a) => a.classList.toggle('active', a.dataset.tab === shown));
