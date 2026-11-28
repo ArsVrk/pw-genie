@@ -691,3 +691,4 @@ a.ilink { word-break: break-all; }
 }
 .g-two > *, .g-cards3 > * { min-width: 0; }
 @media (max-width: 700px) { .g-tbl { font-size: .74rem; } .g-tbl th, .g-tbl td { padding: 3px 4px; } .g-box { padding: 12px; } }
+.cards-note { margin: 10px 0 0; font-size: .78rem; color: var(--muted); line-height: 1.45; }

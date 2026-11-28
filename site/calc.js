@@ -306,7 +306,7 @@ async function initCalc() {
   wireElfWindow();
   wireGeniusWindow();
   addEventListener('resize', refitElf);
-  new ResizeObserver(refitElf).observe($('#tab-calc'));
+  new ResizeObserver(() => requestAnimationFrame(refitElf)).observe($('#tab-calc'));
 
   // skills: 2×4 slots + the in-game skill tree picker
   await initSkillTree();

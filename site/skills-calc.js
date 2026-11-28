@@ -117,7 +117,7 @@ async function initSkillTree() {
   }
   $('#c-fit-elems').addEventListener('click', fitElementsToSkills);
   addEventListener('resize', fitTrees);
-  new ResizeObserver(fitTrees).observe($('#tree-wins'));
+  new ResizeObserver(() => requestAnimationFrame(fitTrees)).observe($('#tree-wins'));
   fitTrees();
 }
 
