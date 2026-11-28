@@ -653,3 +653,19 @@ footer.site-foot { flex-shrink: 0; }
 .build-dlg label:not(.chk) { align-items: stretch; }
 .build-dlg [hidden] { display: none !important; }
 .build-dlg label.chk { font-size: .85rem; }
+
+/* comments under players' builds */
+.pb-cmts { border-top: 1px solid var(--line); padding-top: 6px; font-size: .85rem; }
+.pb-cmts summary { cursor: pointer; color: var(--gold-2); }
+.pb-clist { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; max-height: 260px; overflow-y: auto; }
+.pb-c { padding: 6px 8px; border-radius: 6px; background: rgba(0, 0, 0, .25); }
+.pb-c > div { display: flex; gap: 8px; align-items: baseline; }
+.pb-c b { color: #f8d9a0; }
+.pb-c .muted { font-size: .72rem; }
+.pb-c p { margin: 3px 0 0; white-space: pre-wrap; line-height: 1.4; color: #d8cdb5; }
+.pb-cdel { margin-left: auto; padding: 0 6px; line-height: 1.2; background: transparent; border: 1px solid var(--line); color: var(--muted); }
+.pb-cdel:hover { color: #ff8a6a; border-color: #ff8a6a; }
+.pb-cform { display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+.pb-cform input { grid-column: 1 / -1; font: inherit; padding: .25rem .5rem; }
+.pb-cform textarea { font: inherit; padding: .25rem .5rem; resize: vertical; }
+.pb-cform button { align-self: end; padding: .3rem .8rem; }

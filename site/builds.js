@@ -4,7 +4,8 @@
    luckyTier, LP_TIER_COLORS, TIER_FORM, maxLucky, skillSlots, renderTooltip */
 
 const BUILD_CLASSES = ['Воїн', 'Маг', 'Жрець', 'Друїд', 'Перевертень', 'Вбивця', 'Лучник', 'Страж', 'Шаман', 'Містик'];
-const PB = { list: [], cats: ['ПвП', 'ПвЕ'], editId: null, loaded: false, error: '' };
+const PB = { list: [], cats: ['ПвП', 'ПвЕ'], editId: null, loaded: false, error: '',
+  comments: {}, cmtOn: false, open: new Set() };   // comments by build id; cmtOn = the comments table exists
 
 /* ---------- storage of the author's secret and own builds (this browser only) ---------- */
 const store = {
@@ -21,6 +22,7 @@ function mySecret() {
 }
 const myBuilds = () => store.get('pwg_own', []);
 const isMine = (id) => myBuilds().includes(id);
+const myComments = () => store.get('pwg_own_c', []);
 
 /* ---------- Supabase REST ---------- */
 const sbOn = () => !!(SUPABASE.url && SUPABASE.key);
@@ -44,6 +46,12 @@ async function loadBuilds() {
     PB.cats = [...new Set(['ПвП', 'ПвЕ', ...cats.map((c) => c.name)])];
     PB.error = '';
   } catch (e) { PB.error = e.message; }
+  try {   // comments are optional: the table may not exist yet
+    const cm = await sb('build_comments?select=id,build_id,created_at,nick,text&order=created_at.asc&limit=3000');
+    PB.comments = {};
+    cm.forEach((c) => { (PB.comments[c.build_id] ||= []).push(c); });
+    PB.cmtOn = true;
+  } catch { PB.cmtOn = false; }
   PB.loaded = true;
 }
 
@@ -93,10 +101,26 @@ function playerBuildCard(b) {
           <i>${skillLevelOf(bg, sid)}</i></a>`).join('')}</div></div>
     </div>
     ${b.comment ? `<p class="pb-comment">${esc(b.comment)}</p>` : ''}
+    ${PB.cmtOn ? commentsBlock(b) : ''}
     <div class="b-foot"><span class="muted">${date}</span><span class="pb-act">
       ${isMine(b.id) ? '<button type="button" class="ghost" data-act="edit">Редагувати</button><button type="button" class="ghost" data-act="del">Видалити</button>' : ''}
       <a class="btn-link" href="#calc/${esc(b.state)}">У калькулятор →</a></span></div>
   </article>`;
+}
+
+function commentsBlock(b) {
+  const list = PB.comments[b.id] || [];
+  const mine = myComments();
+  const last = store.get('pwg_last', {});
+  return `<details class="pb-cmts"${PB.open.has(b.id) ? ' open' : ''}><summary>Коментарі (${list.length})</summary>
+    <div class="pb-clist">${list.map((c) => `<div class="pb-c" data-cid="${c.id}"><div><b>${esc(c.nick)}</b>
+      <span class="muted">${new Date(c.created_at).toLocaleString('uk-UA', { dateStyle: 'short', timeStyle: 'short' })}</span>
+      ${mine.includes(c.id) ? '<button type="button" class="pb-cdel" data-act="cdel" title="Видалити свій коментар">×</button>' : ''}</div>
+      <p>${esc(c.text)}</p></div>`).join('') || '<p class="muted">Поки немає коментарів.</p>'}</div>
+    <form class="pb-cform"><input name="nick" maxlength="32" placeholder="Нік" value="${esc(last.nick || '')}" required>
+      <textarea name="text" maxlength="500" rows="2" placeholder="Ваш коментар…" required></textarea>
+      <button type="submit">Надіслати</button></form>
+  </details>`;
 }
 
 function renderPlayerBuilds() {
@@ -120,6 +144,11 @@ function renderPlayerBuilds() {
       <div id="pb-list" class="builds"></div>`;
     ['#pb-cls', '#pb-cat', '#pb-q'].forEach((q) => $(q).addEventListener('input', renderPlayerBuilds));
     $('#pb-list').addEventListener('click', onBuildAction);
+    $('#pb-list').addEventListener('submit', onCommentSubmit);
+    $('#pb-list').addEventListener('toggle', (ev) => {   // keep comments open across re-renders
+      const card = ev.target.closest?.('.pbuild');
+      if (card && ev.target.matches('.pb-cmts')) PB.open[ev.target.open ? 'add' : 'delete'](card.dataset.id);
+    }, true);
   }
   const cat = $('#pb-cat'), cur = cat.value;
   cat.innerHTML = `<option value="">усі</option>${PB.cats.map((c) => `<option>${esc(c)}</option>`).join('')}`;
@@ -138,6 +167,14 @@ async function onBuildAction(ev) {
     PB.editId = id;
     location.hash = `calc/${b.state}`;
     setTimeout(() => openSaveBuild(b), 300);
+  } else if (btn.dataset.act === 'cdel') {
+    const cid = btn.closest('.pb-c').dataset.cid;
+    if (!confirm('Видалити свій коментар?')) return;
+    try {
+      await sb('rpc/delete_comment', { method: 'POST', body: JSON.stringify({ p_id: cid, p_secret: mySecret() }) });
+      store.set('pwg_own_c', myComments().filter((x) => x !== cid));
+      await loadBuilds(); renderPlayerBuilds();
+    } catch (e) { alert(`Не вдалося видалити: ${e.message}`); }
   } else if (btn.dataset.act === 'del') {
     if (!confirm(`Видалити білд «${b.nick} · ${b.category}»? Повернути не можна.`)) return;
     try {
@@ -146,6 +183,24 @@ async function onBuildAction(ev) {
       await loadBuilds(); renderPlayerBuilds();
     } catch (e) { alert(`Не вдалося видалити: ${e.message}`); }
   }
+}
+
+async function onCommentSubmit(ev) {
+  const form = ev.target.closest('.pb-cform');
+  if (!form) return;
+  ev.preventDefault();
+  const id = form.closest('.pbuild').dataset.id;
+  const nick = form.nick.value.trim(), text = form.text.value.trim();
+  if (!nick || !text) return;
+  const btn = form.querySelector('button');
+  btn.disabled = true;
+  try {
+    const cid = await sb('rpc/add_comment', { method: 'POST', body: JSON.stringify({ p_build: id, p_secret: mySecret(), p_nick: nick, p_text: text }) });
+    store.set('pwg_own_c', [...myComments(), cid]);
+    store.set('pwg_last', { ...store.get('pwg_last', {}), nick });
+    PB.open.add(id);
+    await loadBuilds(); renderPlayerBuilds();
+  } catch (e) { alert(`Не вдалося надіслати: ${e.message}`); btn.disabled = false; }
 }
 
 /* ---------- «Зберегти білд» dialog ---------- */
