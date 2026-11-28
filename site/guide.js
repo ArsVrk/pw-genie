@@ -1,6 +1,6 @@
 'use strict';
-/* ================= «Про джинів» (the guide) and «Білди» (example builds) ================= */
-/* globals: $, h, esc, BY_ID, G, STATS, STAT_UK, ELEMS, ELEM_UK, iconSrc, elementPoints, maxLucky */
+/* ================= «Про джинів» (the guide) and the «Білди» page frame ================= */
+/* globals: $, h, esc, BY_ID, G, STATS, STAT_UK, iconSrc */
 let GUIDE = null;   // data/guide.json (tools/build_guide.py)
 
 const gSkill = (id) => (BY_ID[id]
@@ -10,42 +10,14 @@ const gIcons = (ids) => `<span class="gicons">${ids.filter((id) => BY_ID[id]).ma
   `<a href="#skill/${id}" data-tip="gtree:${id}"><img src="${iconSrc(id)}" alt="${esc(BY_ID[id].name)}"></a>`).join('')}</span>`;
 const STAT_COLOR = { strength: '#ff7a5a', agility: '#7ee35a', vitality: '#ffcb4a', intellect: '#6fb6ff' };
 
-/** A link that opens the build in the calculator: the genie by stats, enough level / luck / elements for it. */
-function buildCalcLink(b) {
-  const genie = b.stat === 'str' ? 22181 : 23754;          // Тай Чін (сила) / Тай Сюань (витривалість)
-  const level = b.elem_sum <= elementPoints(100) ? 100 : 105;
-  const n = b.skills.length;
-  const lp = n > 4 ? [51, 71, 81, 91][Math.min(n, 8) - 5] : 30;
-  return `#calc/g=${genie}&l=${level}&lp=${Math.min(lp, maxLucky(level))}&e=${b.elems.join(',')}&k=${b.skills.join(',')}`;
-}
-
-function buildCard(b) {
-  const cap = elementPoints(105);
-  const fits = b.elem_sum <= elementPoints(100) ? 'джин 100 рівня' : b.elem_sum <= cap ? 'лише джин 105 рівня' : `не влазить (макс. ${cap})`;
-  const bad = b.elem_sum > cap;
-  return `<article class="build${bad ? ' bad' : ''}">
-    <header><b>${esc(b.title)}</b><span class="tag mode">${esc(b.mode)}</span>${b.classes.map((c) => `<span class="tag cls">${esc(c)}</span>`).join('')}
-      ${b.assumed ? '<span class="tag dim" title="Зібрано з переліку скілів у гайді, а не готовий набір звідти">зі списку</span>' : ''}</header>
-    ${gSkills(b.skills)}
-    <div class="b-elems">${ELEMS.map((e, i) => (b.elems[i] ? `<span class="epill el-${e}">${ELEM_UK[e]} ${b.elems[i]}</span>` : '')).join('')}
-      <span class="b-sum ${bad ? 'bad-t' : 'ok-t'}"><b>${b.elem_sum}</b> · ${fits}</span></div>
-    <div class="b-foot"><span class="muted">Стати: ${b.stat === 'str' ? 'сила' : 'інтелект + витривалість'}</span>
-      <a class="btn-link" href="${buildCalcLink(b)}">У калькулятор →</a></div>
-    ${b.note ? `<p class="b-note">${esc(b.note)}</p>` : ''}
-  </article>`;
-}
-
-/* ---------- «Білди»: for now the guide builds as examples; user builds will come here ---------- */
+/* ---------- «Білди»: players' builds (builds.js) ---------- */
 function renderBuilds() {
   $('#p-list').innerHTML = `
     <div class="g-hero small"><div>
       <h2>Білди</h2>
       <p>Збірки гравців: складіть джина в <a href="#calc">калькуляторі</a> і натисніть «Зберегти» у вікні джина.
-        Нижче — <b>приклади з гайдів</b>, адаптовані під CyberPW. Чому саме такі скіли — у <a href="#about">гайді</a>.</p></div></div>
-    <h3 class="builds-h">Білди гравців</h3>
-    <section id="pb"></section>
-    <h3 class="builds-h">Приклади з гайдів</h3>
-    <div class="builds">${GUIDE.builds.map(buildCard).join('')}</div>`;
+        Поради, які скіли брати, — у <a href="#about">гайді</a>.</p></div></div>
+    <section id="pb"></section>`;
 }
 
 /* ---------- «Про джинів»: the guide ---------- */
@@ -73,7 +45,7 @@ function newbieSections() {
         <li><b>Вдягніть його.</b> Перетягніть джина в порожній слот спорядження праворуч від кілець. Вікно джина — правий клік по
           його іконці на екрані. <span class="warn">У бойовому режимі змінити джина не можна.</span></li>
         <li><b>Розподіліть очки.</b> Характеристики — у вікні джина (Статус), стихії — кнопкою «Стихії».
-          Не знаєте як — зберіть джина в <a href="#calc">калькуляторі</a> або візьміть <a href="#builds">готовий білд</a>.</li>
+          Не знаєте як — зберіть джина в <a href="#calc">калькуляторі</a> або подивіться <a href="#builds">білди гравців</a>.</li>
         <li><b>Вивчіть скіли</b> у ${NPC}. Скіли вчаться за Дух персонажа, кожен рівень скіла —
           з певного рівня джина. Без потрібних стихій скіл не вивчити й не застосувати.</li>
       </ol>
@@ -169,7 +141,6 @@ function renderGuide(cats) {
       <div class="gg-skill">${g.init_skills.map(gSkill).join('')}</div></div></div>`;
   const CAT_COLOR = { immune: '#6fb6ff', cleanse: '#7ee35a', elem: '#ffcb4a', debuff: '#c07aff', dmg: '#ff7a5a',
     control: '#5ad6d6', buff: '#ffdc50', attack: '#ff9f43' };
-  const classBuilds = (name) => GUIDE.builds.filter((b) => b.classes.includes(name));
 
   $('#about').innerHTML = `
     <div class="g-hero">
@@ -178,7 +149,7 @@ function renderGuide(cats) {
         <p>Джин — маленький помічник, що б'ється поруч: дає імуни, знімає контроль, прискорює і послаблює ворогів.
           Тут — як він працює, які скіли брати і чому, з урахуванням правил сервера CyberPW.</p>
         <nav class="guide-toc">${[['basics', 'Основи'], ['start', 'Для новачків'], ['types', 'Джини'], ['rules', 'Правила'], ['cats', 'Категорії'],
-    ['classes', 'Класи'], ['builds', 'Білди']].map(([id, t]) => `<a href="#about" data-to="g-${id}">${t}</a>`).join('')}</nav>
+    ['classes', 'Класи']].map(([id, t]) => `<a href="#about" data-to="g-${id}">${t}</a>`).join('')}</nav>
       </div>
       <div class="g-hero-pics">${G.genies.filter((g) => g.source === 'npc').map((g) => `<img src="${g.avatars[g.avatars.length - 1]}" alt="">`).join('')}</div>
     </div>
@@ -230,16 +201,8 @@ function renderGuide(cats) {
         </div>
         <p class="g-note">${esc(c.note)}</p>
         <p class="g-stats"><span>Стати джина</span> ${esc(c.stats)}</p>
-        ${classBuilds(c.name).length ? `<div class="g-cbuilds"><span>Готові білди:</span> ${classBuilds(c.name)
-    .map((b) => `<a class="btn-link" href="${buildCalcLink(b)}">${esc(b.title)} →</a>`).join('')}</div>` : ''}
       </div>`).join('')}
     </section>
-
-    <section class="g-sec" id="g-builds"><div class="g-cta">
-      <div><h3>Приклади білдів</h3><p>${GUIDE.builds.length} наборів зі стихіями під CyberPW — кожен відкривається в калькуляторі одним кліком.</p></div>
-      <a class="btn-link big" href="#builds">До білдів →</a></div>
-    </section>
-
     `;
 
   const root = $('#about');
