@@ -6,7 +6,7 @@
 <title>Джини PW — база скілів і калькулятор</title>
 <meta name="description" content="База скілів джинів Perfect World (CyberPW): фільтри, характеристики по рівнях, калькулятор джина, спорядження та білди.">
 <link rel="icon" href="icons/skills/1038.png">
-<link rel="stylesheet" href="style.css?v=80">
+<link rel="stylesheet" href="style.css?v=82">
 </head>
 <body>
 <header class="top">
@@ -117,11 +117,29 @@
     <div class="sf-r"><span>Made by <b>DawnGuard</b> from <b>ЧорнаРада</b></span><span>© 2026 ЧорнаРада</span></div>
   </div>
 </footer>
+<dialog id="build-dlg" class="build-dlg">
+  <form id="build-form" method="dialog">
+    <h2>Зберегти білд</h2>
+    <div id="bd-preview" class="bd-preview"></div>
+    <label>Нік <input id="bd-nick" maxlength="32" autocomplete="nickname" required></label>
+    <label>Клас персонажа <select id="bd-class"></select></label>
+    <label>Категорія <select id="bd-cat"></select></label>
+    <input id="bd-newcat" maxlength="40" placeholder="Назва нової категорії (її зможуть вибирати інші)" hidden>
+    <label>Коментар <textarea id="bd-comment" maxlength="1000" rows="4" placeholder="Для чого цей джин, як ним грати…"></textarea></label>
+    <label class="chk" id="bd-update-row" hidden><input type="checkbox" id="bd-update"> Оновити мій білд «<span id="bd-update-name"></span>» (інакше — новий)</label>
+    <p class="muted bd-note">Рівень, джин, характеристики, стихії, спорядження й скіли беруться з калькулятора.
+      Редагувати й видаляти білд можна з цього браузера.</p>
+    <div id="bd-msg" class="bad-t"></div>
+    <div class="bd-btns"><button type="button" id="bd-cancel" class="ghost">Скасувати</button><button type="submit" id="bd-save">Зберегти</button></div>
+  </form>
+</dialog>
 <div id="tip" class="tooltip tip" hidden></div>
-<script src="app.js?v=80"></script>
-<script src="calc.js?v=80"></script>
-<script src="skill-cards.js?v=80"></script>
-<script src="skills-calc.js?v=80"></script>
-<script src="guide.js?v=80"></script>
+<script src="app.js?v=82"></script>
+<script src="calc.js?v=82"></script>
+<script src="skill-cards.js?v=82"></script>
+<script src="skills-calc.js?v=82"></script>
+<script src="builds-config.js?v=82"></script>
+<script src="builds.js?v=82"></script>
+<script src="guide.js?v=82"></script>
 </body>
 </html>

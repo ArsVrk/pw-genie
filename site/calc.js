@@ -260,8 +260,11 @@ function buildElfExtras() {
   // what the skills need + actions
   W.root.append(h('div', { class: 'gc gneed', style: 'left:25px;top:562px;width:263px;height:48px' },
     '<div id="c-need"></div><div id="c-fit-msg"></div>'));
-  const share = gameCtl('Btn_Cancel', { name: 'Btn_Share', x: 76.5, y: 604, w: 76, text: 'Посилання' });
-  const reset = gameCtl('Btn_Cancel', { name: 'Btn_Reset', x: 160.5, y: 604, w: 76, text: 'Скинути' });
+  const save = gameCtl('Btn_Cancel', { name: 'Btn_Save', x: 34.5, y: 604, w: 76, text: 'Зберегти' });
+  const share = gameCtl('Btn_Cancel', { name: 'Btn_Share', x: 118.5, y: 604, w: 76, text: 'Посилання' });
+  const reset = gameCtl('Btn_Cancel', { name: 'Btn_Reset', x: 202.5, y: 604, w: 76, text: 'Скинути' });
+  Object.assign(save, { id: 'c-save' }).dataset.tip = 'text:Зберегти білд у вкладку «Білди» (нік, клас, категорія, коментар)';
+  save.addEventListener('click', () => openSaveBuild());
   Object.assign(share, { id: 'c-share' }).dataset.tip = 'text:Скопіювати посилання на цю збірку';
   Object.assign(reset, { id: 'c-reset' }).dataset.tip = 'text:Почати збірку з нуля';
 }

@@ -332,7 +332,8 @@ function initTips() {
             : kind === 'genie' ? genieTooltip(+id)
               : kind === 'portrait' ? portraitTooltip()
                 : kind === 'tree' ? treeTooltip(+id)
-                  : kind === 'gtree' ? treeTooltip(+id, 1, { plain: true }) : '';
+                  : kind === 'gtree' ? treeTooltip(+id, 1, { plain: true })
+                    : kind === 'bgenie' ? buildGenieTooltip(id) : '';
     if (!html) { tip.hidden = true; return; }
     tip.innerHTML = html;
     tip.hidden = false;
@@ -353,6 +354,7 @@ async function boot() {
   await initCalc(); renderCalc();
   initEquip(); renderEquip(); initTips();
   renderBuilds(); renderGuide(cats);
+  initPlayerBuilds();
   $('#skill-dlg').addEventListener('close', () => {
     if (location.hash.startsWith('#skill/')) history.replaceState(null, '', `#calc/${saveCalcState()}`);
   });

@@ -613,3 +613,43 @@ body { display: flex; flex-direction: column; }
 body > main { flex: 1 0 auto; width: 100%; box-sizing: border-box; }
 footer.site-foot { flex-shrink: 0; }
 .g-disclaimer { margin: -4px 0 12px; padding: 8px 12px; border: 1px dashed #6b5935; border-radius: 8px; color: #d8cdb5; font-size: .88rem; background: rgba(255, 203, 74, .04); }
+
+/* ---------- players' builds ---------- */
+.pb-filters { margin-bottom: 10px; }
+.pb-filters input[type=search] { padding: .25rem .5rem; min-width: 200px; }
+.pb-filters .btn-link { margin-left: auto; }
+.pbuild { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--line); border-radius: 10px;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); }
+.pbuild header { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pb-nick { font-size: 1.05rem; color: #f8d9a0; margin-right: 2px; }
+.pbuild .tag { font-size: .72rem; padding: 0 7px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); }
+.pbuild .tag.mode { color: #fff; border-color: #6b5935; background: #3b311f; }
+.pbuild .tag.cls { color: var(--gold-2); }
+.pb-lv { margin-left: auto; font-size: .82rem; color: var(--gold); font-weight: 600; }
+.pb-genie { display: flex; gap: 12px; align-items: center; padding: 8px 10px; border-radius: 8px; background: rgba(0, 0, 0, .3); }
+.pb-ava { width: 52px; height: 52px; flex: none; border-radius: 50%; border: 2px solid #c9962e; background: #0f0d09;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .5), 0 0 10px rgba(255, 203, 74, .2); image-rendering: pixelated; cursor: help; }
+.pb-gbody { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.pb-skills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pb-skills a { position: relative; display: block; }
+.pb-skills img { width: 30px; height: 30px; border: 1px solid #000; border-radius: 3px; image-rendering: pixelated; display: block; }
+.pb-skills i { position: absolute; right: 1px; bottom: 0; font-style: normal; font-size: 9px; font-weight: 700; color: #fff;
+  text-shadow: 0 0 2px #000, 0 0 2px #000; }
+.pb-comment { margin: 0; font-size: .86rem; line-height: 1.45; white-space: pre-wrap; color: #d8cdb5; }
+.pb-act { display: flex; gap: 6px; align-items: center; }
+.pb-act button { padding: .15rem .55rem; font-size: .8rem; }
+
+.build-dlg { width: min(480px, calc(100vw - 32px)); }
+.build-dlg form { display: flex; flex-direction: column; gap: 10px; }
+.build-dlg h2 { margin: 0; }
+.build-dlg label:not(.chk) { display: flex; flex-direction: column; gap: 4px; font-size: .88rem; color: var(--muted); }
+.build-dlg input:not([type=checkbox]), .build-dlg select, .build-dlg textarea { font: inherit; padding: .35rem .5rem; }
+.build-dlg textarea { resize: vertical; }
+.bd-preview { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 8px; background: rgba(0, 0, 0, .3); font-size: .88rem; }
+.bd-preview .pb-skills { margin-top: 4px; }
+.bd-note { margin: 0; font-size: .78rem; }
+.bd-btns { display: flex; justify-content: flex-end; gap: 8px; }
+.build-dlg form { text-align: left; align-items: stretch; }
+.build-dlg label:not(.chk) { align-items: stretch; }
+.build-dlg [hidden] { display: none !important; }
+.build-dlg label.chk { font-size: .85rem; }
