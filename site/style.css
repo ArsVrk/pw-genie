@@ -607,3 +607,9 @@ footer.site-foot { margin-top: 2rem; padding: 1.4rem 16px; border-top: 1px solid
 .sf-r { text-align: right; font-size: .78rem; }
 .sf-r b { color: var(--gold); }
 @media (max-width: 600px) { .sf-r { text-align: left; } }
+
+/* footer stays at the bottom on short pages */
+body { display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; width: 100%; box-sizing: border-box; }
+footer.site-foot { flex-shrink: 0; }
+.g-disclaimer { margin: -4px 0 12px; padding: 8px 12px; border: 1px dashed #6b5935; border-radius: 8px; color: #d8cdb5; font-size: .88rem; background: rgba(255, 203, 74, .04); }

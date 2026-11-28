@@ -39,10 +39,14 @@ const enVal = (e) => (e === 'all' ? 9999 : e);
 const enTxt = (e) => (e === 'all' ? 'вся' : e);
 
 /** Render a game tooltip with ^rrggbb color codes. */
+const CLASS_FIX = [[/кроме/g, 'крім'], [/воинов/g, 'воїнів'], [/воин/g, 'воїн'], [/оборотень/g, 'перевертень'],
+  [/жрец(?!ь)/g, 'жрець'], [/зооморфов\.?/g, 'звіролюдей'], [/друид/g, 'друїд']];
 function renderTooltip(raw, { head: useHead = true } = {}) {
   if (!raw) return '';
   // typos in the game texts: Cyrillic а/е/с inside color codes (e.g. «^ffcb4а»)
   raw = raw.replace(/\^[0-9a-fA-FаАеЕсС]{6}/g, (m) => m.replace(/[аА]/g, 'a').replace(/[еЕ]/g, 'e').replace(/[сС]/g, 'c'));
+  // class names in «Обмеження:» were left untranslated in the game texts
+  raw = raw.replace(/(Обмеження:)([^\n]*)/g, (m, a, b) => a + CLASS_FIX.reduce((t, [re, uk]) => t.replace(re, uk), b));
   const lines = raw.split('\n');
   const colorize = (txt) => {
     let out = '', open = false;

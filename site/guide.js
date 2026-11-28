@@ -218,6 +218,8 @@ function renderGuide(cats) {
     </section>
 
     <section class="g-sec" id="g-classes"><h3>Скіли по класах</h3>
+      <p class="g-disclaimer">Зібрано з гайдів і порад гравців в інтернеті — це <b>лише приклади</b>, а не єдино правильні набори.
+        Підбирайте скіли під свій стиль гри й перевіряйте в калькуляторі.</p>
       <div class="g-ctabs" role="tablist">${GUIDE.classes.map((c, i) => `<button type="button" role="tab" data-ci="${i}"${i ? '' : ' aria-selected="true"'}>${esc(c.name)}</button>`).join('')}</div>
       ${GUIDE.classes.map((c, i) => `<div class="g-class" data-ci="${i}"${i ? ' hidden' : ''}>
         <div class="g-cols">
