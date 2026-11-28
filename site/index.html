@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Джини PW — база скілів і калькулятор</title>
+<meta name="description" content="База скілів джинів Perfect World (CyberPW): фільтри, характеристики по рівнях, калькулятор джина, спорядження та білди.">
+<link rel="icon" href="icons/skills/1038.png">
+<link rel="stylesheet" href="style.css?v=78">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img src="icons/skills/1038.png" alt="" width="28" height="28">
+    <span>Джини PW</span>
+  </div>
+  <nav class="tabs" role="tablist">
+    <a href="#calc" data-tab="calc">Калькулятор</a>
+    <a href="#equip" data-tab="equip">Спорядження</a>
+    <a href="#presets" data-tab="presets">Білди</a>
+    <a href="#about" data-tab="about">Про джинів</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ CALCULATOR ============ -->
+  <section id="tab-calc" class="tab">
+    <div class="panel calc-bar">
+      <div id="c-genies" class="gpicks"></div>
+      <div class="tree-filters">
+        <small>Фільтр скілів</small>
+        <div class="tf-row">
+          <label>Категорія <select id="t-cat"><option value="">будь-яка</option></select></label>
+          <label>Клас <select id="t-class"><option value="">будь-який</option></select></label>
+          <label>Де <select id="t-terrain">
+            <option value="">будь-де</option><option value="land">на землі</option>
+            <option value="air">у повітрі</option><option value="water">у воді</option></select></label>
+          <label>Стихія <select id="t-elem"><option value="">будь-яка</option>
+            <option value="metal">Метал</option><option value="wood">Дерево</option><option value="water">Вода</option>
+            <option value="fire">Вогонь</option><option value="earth">Земля</option><option value="none">без стихій</option></select></label>
+          <label>Вплив <select id="t-infl"><option value="">будь-який</option>
+            <option value="strength">Сили</option><option value="agility">Спритності</option><option value="none">без впливу</option></select></label>
+          <label class="chk"><input type="checkbox" id="t-avail"> лише доступні</label>
+          <span class="count" id="t-count"></span>
+        </div>
+      </div>
+    </div>
+    <div class="calc-cols">
+      <div class="calc-col1">
+        <div class="gwin-wrap" id="win-elf"></div>
+        <div class="gwin-wrap" id="win-genius" hidden></div>
+      </div>
+      <div class="calc-col2">
+        <div id="tree-wins"></div>
+      </div>
+    </div>
+    <div id="c-cards-wrap" class="cards-wrap" hidden>
+      <h2>Вибрані скіли <small><b style="color:#ffdc50">Жовтим</b> — з урахуванням Сили/Спритності джина, у дужках — базове значення гри + бонус. Гра у своїх підказках показує лише базове. Перевірено в грі: бонус рахується повними кроками («кожні 10 очок»), а таймер ефекту в грі показує на 1 сек. менше.</small></h2>
+      <div id="c-cards" class="skill-cards"></div>
+    </div>
+  </section>
+
+  <!-- (selected skill cards live inside the calculator section) -->
+  <!-- ============ EQUIPMENT ============ -->
+  <section id="tab-equip" class="tab" hidden>
+    <div class="craft">
+      <div class="panel craft-win">
+        <h2>Кування спорядження джина <small>NPC «Дослідник п'яти стихій»</small></h2>
+        <div class="craft-tabs" id="e-tabs" role="tablist"></div>
+        <div class="craft-grid" id="e-grid"></div>
+        <p class="hint">Наведіть на іконку — підказка як у грі. Натисніть — рецепт і скільки всього потрібно.</p>
+      </div>
+      <div class="panel craft-detail" id="e-detail"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRESETS ============ -->
+  <section id="tab-presets" class="tab" hidden>
+    <div id="p-list"></div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="tab-about" class="tab" hidden>
+    <article class="guide" id="about"></article>
+  </section>
+</main>
+
+<dialog id="eq-dlg" class="eq-dlg">
+  <div class="dlg-head2">
+    <h2 id="eq-dlg-title"></h2>
+    <button class="close" type="button" aria-label="Закрити" onclick="this.closest('dialog').close()">✕</button>
+  </div>
+  <div id="eq-dlg-grid" class="craft-grid"></div>
+  <div class="actions"><button id="eq-dlg-remove" type="button" class="ghost">Зняти</button></div>
+</dialog>
+
+
+<dialog id="skill-dlg">
+  <div class="dlg-head">
+    <img id="d-icon" alt="" width="40" height="40">
+    <div>
+      <h2 id="d-name"></h2>
+      <div id="d-meta" class="meta"></div>
+    </div>
+    <button class="close" type="button" aria-label="Закрити" onclick="this.closest('dialog').close()">✕</button>
+  </div>
+  <div class="lvl-pick">
+    <label>Рівень скіла <input id="d-lvl" type="range" min="1" max="10" value="1"> <output id="d-lvl-out">1</output></label>
+  </div>
+  <div id="d-tooltip" class="tooltip"></div>
+  <div class="table-wrap"><table id="d-table"></table></div>
+</dialog>
+
+<footer class="site-foot">
+  <div class="sf-in">
+    <div class="sf-l"><b>Джини PW</b><span>Гайд, база скілів і калькулятор джинів для сервера CyberPW.</span></div>
+    <div class="sf-r"><span>Made by <b>DawnGuard</b> from <b>ЧорнаРада</b></span><span>© 2026 ЧорнаРада</span></div>
+  </div>
+</footer>
+<div id="tip" class="tooltip tip" hidden></div>
+<script src="app.js?v=78"></script>
+<script src="calc.js?v=78"></script>
+<script src="skill-cards.js?v=78"></script>
+<script src="skills-calc.js?v=78"></script>
+<script src="guide.js?v=78"></script>
+</body>
+</html>

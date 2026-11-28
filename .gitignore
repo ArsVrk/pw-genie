@@ -1,0 +1,9 @@
+# local working files (not published)
+raw/
+tools/
+docs/
+site_data/
+.claude/
+__pycache__/
+*.pyc
+/~/

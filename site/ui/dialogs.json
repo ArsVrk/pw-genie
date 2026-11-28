@@ -1,0 +1,5102 @@
+{
+ "Win_CharacterELF": {
+  "name": "Win_CharacterELF",
+  "w": 310,
+  "h": 441,
+  "controls": [
+   {
+    "type": "EDIT",
+    "name": "Edit_all",
+    "x": 4,
+    "y": 33,
+    "w": 297,
+    "h": 398,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg",
+    "x": 0,
+    "y": 10,
+    "w": 309,
+    "h": 431,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/e3ac4205fe02.png"
+    },
+    "tex": [
+     120,
+     120
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg1",
+    "x": 13,
+    "y": 40,
+    "w": 283,
+    "h": 388,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/6760ca5dea33.png"
+    },
+    "tex": [
+     90,
+     90
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Title",
+    "x": 26,
+    "y": 0,
+    "w": 283,
+    "h": 63,
+    "img": {
+     "FrameImage": "ui/tex/2d6e595e143a.png"
+    },
+    "tex": [
+     298,
+     63
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_01",
+    "x": 49,
+    "y": 294,
+    "w": 36,
+    "h": 36,
+    "img": {
+     "FrameImage": "ui/tex/f0f4c18beecd.png"
+    },
+    "tex": [
+     36,
+     36
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_02",
+    "x": 108,
+    "y": 294,
+    "w": 36,
+    "h": 36,
+    "img": {
+     "FrameImage": "ui/tex/654740a0f767.png"
+    },
+    "tex": [
+     36,
+     36
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_03",
+    "x": 170,
+    "y": 294,
+    "w": 36,
+    "h": 36,
+    "img": {
+     "FrameImage": "ui/tex/cb444c747a6a.png"
+    },
+    "tex": [
+     36,
+     36
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_04",
+    "x": 228,
+    "y": 294,
+    "w": 36,
+    "h": 36,
+    "img": {
+     "FrameImage": "ui/tex/f7d71e9c2c66.png"
+    },
+    "tex": [
+     36,
+     36
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Control_194810476",
+    "x": 30,
+    "y": 153,
+    "w": 258,
+    "h": 120,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/b9ac3faf6045.png"
+    },
+    "tex": [
+     60,
+     60
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Control_148456557",
+    "x": 26,
+    "y": 74,
+    "w": 68,
+    "h": 65,
+    "img": {
+     "FrameImage": "ui/tex/dd8d571e79dd.png"
+    },
+    "tex": [
+     68,
+     65
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Elf",
+    "x": 36,
+    "y": 81,
+    "w": 49,
+    "h": 49,
+    "img": {
+     "FrameImage": "ui/tex/c65f2afc7037.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_Title",
+    "x": 125,
+    "y": 8,
+    "w": 0,
+    "h": 0,
+    "text": "Джин",
+    "font": "方正隶二简体",
+    "size": 16,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "PROGRESS",
+    "name": "Progress_EXP",
+    "x": 69,
+    "y": 403,
+    "w": 219,
+    "h": 11,
+    "img": {
+     "FrameImage": "ui/tex/5873b4b7cdd2.png",
+     "FillImage": "ui/tex/50efd309512e.png"
+    },
+    "tex": [
+     221,
+     15
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_EXP",
+    "x": 27,
+    "y": 400,
+    "w": 50,
+    "h": 22,
+    "text": "Досвід:",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": "#ffcb4a",
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_EXP",
+    "x": 144,
+    "y": 400,
+    "w": 0,
+    "h": 0,
+    "text": "100/10000",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "Поточний досвід джина. Коли смуга досвіду заповнюється, ви можете зайти в панель розподілу досвіду джина."
+   },
+   {
+    "type": "EDIT",
+    "name": "Control_38306375",
+    "x": 98,
+    "y": 73,
+    "w": 190,
+    "h": 65,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/b9ac3faf6045.png"
+    },
+    "tex": [
+     60,
+     60
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Element",
+    "x": 39,
+    "y": 346,
+    "w": 70,
+    "h": 25,
+    "text": "Стихії",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "hint": "Натисніть щоб увійти в панель здібностей джина",
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Name",
+    "x": 112,
+    "y": 51,
+    "w": 147,
+    "h": 20,
+    "text": "Ім'я - не більше 9 символів",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": "#ffcb4a",
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_DESC",
+    "x": -4000,
+    "y": -4000,
+    "w": 166,
+    "h": 55,
+    "text": "Опис",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_126851144",
+    "x": 146,
+    "y": 138,
+    "w": 42,
+    "h": 19,
+    "text": "Статус",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": "#ffcb4a",
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_AGI",
+    "x": 160,
+    "y": 189,
+    "w": 75,
+    "h": 21,
+    "text": "Спрт:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aСпритність\n^ffffffВпливає на завдану шкоду та ефективність деяких навичок джина."
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Level",
+    "x": 47,
+    "y": 53,
+    "w": 0,
+    "h": 0,
+    "text": "18 сходинок",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aРанг\n^ffffffВажливий для вивчення вмінь."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_SuccinctLevel",
+    "x": -3000,
+    "y": -3000,
+    "w": 53,
+    "h": 22,
+    "text": "ОК:",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": "#ffcb4a",
+    "bold": false,
+    "hint": "Показує поточний рівень джина та рівень, якого можна досягти."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_STR",
+    "x": 40,
+    "y": 189,
+    "w": 75,
+    "h": 21,
+    "text": "Сила:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aПотужність\n^ffffffВпливає на завдану шкоду та ефективність деяких навичок джина."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_Vit",
+    "x": 40,
+    "y": 212,
+    "w": 75,
+    "h": 21,
+    "text": "Витр:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aВитривалість\n^ffffffВпливає на максимальний показник енергії.\n1 одиниця витривалості збільшує максимальний показник енергії на 1."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_MIG",
+    "x": 160,
+    "y": 212,
+    "w": 75,
+    "h": 21,
+    "text": "Інтл:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aІнтелект\n^ffffffВпливає на швидкість відновлення енергії джина.\nКожні 50 одиниць збільшують швидкість відновлення енергії на 1 од. за секунду."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_Power",
+    "x": 104,
+    "y": 78,
+    "w": 102,
+    "h": 17,
+    "text": "Енергія:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aЕнергія\n^ffffffЕнергія витрачається при використанні умінь.\nВідновлюється повільно.\nКоли енергії недостатньо, джин не може використовувати свої уміння."
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_ReplyPower",
+    "x": 103,
+    "y": 94,
+    "w": 156,
+    "h": 18,
+    "text": "Восст. енергії:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "Швидкість відновлення енергії джина"
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_Endurance",
+    "x": 105,
+    "y": 112,
+    "w": 165,
+    "h": 19,
+    "text": "Витривалість:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aФізична сила\n^ffffffВитрачається при використанні умінь джина.\nКоли показник дорівнює 0, джин не може використовувати свої уміння і отримати покращення.\nФізичну силу можна змінити за допомогою каменю Ши."
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_SuccinctFAQ",
+    "x": -3000,
+    "y": -3000,
+    "w": 243,
+    "h": 47,
+    "text": "Короткий опис дії",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Item",
+    "x": -4000,
+    "y": -4000,
+    "w": 65,
+    "h": 24,
+    "text": "Предмет",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fffbca",
+    "bold": true,
+    "hint": "Натисніть щоб увійти в панель спорядження джина",
+    "img": {
+     "FrameUpImage": "ui/tex/857754c83d49.png",
+     "FrameDownImage": "ui/tex/e4908260ab2f.png"
+    },
+    "tex": [
+     60,
+     28
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_EXP+",
+    "x": 202,
+    "y": 347,
+    "w": 70,
+    "h": 25,
+    "text": "Досвід",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "hint": "Натисніть, щоб зайти в панель поділу досвіду джина.",
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_AddSTR",
+    "x": 116,
+    "y": 190,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/192b20b0c065.png",
+     "FrameDownImage": "ui/tex/fbe8255aea61.png",
+     "FrameOnHoverImage": "ui/tex/aad9b7e5fbc4.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_AddAGI",
+    "x": 236,
+    "y": 190,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/192b20b0c065.png",
+     "FrameDownImage": "ui/tex/fbe8255aea61.png",
+     "FrameOnHoverImage": "ui/tex/aad9b7e5fbc4.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_AddVIT",
+    "x": 116,
+    "y": 213,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/192b20b0c065.png",
+     "FrameDownImage": "ui/tex/fbe8255aea61.png",
+     "FrameOnHoverImage": "ui/tex/aad9b7e5fbc4.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_AddNIG",
+    "x": 236,
+    "y": 212,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/192b20b0c065.png",
+     "FrameDownImage": "ui/tex/fbe8255aea61.png",
+     "FrameOnHoverImage": "ui/tex/aad9b7e5fbc4.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lab_Shengyudian",
+    "x": 40,
+    "y": 165,
+    "w": 72,
+    "h": 21,
+    "text": "Очки:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aДодаткові очки\n^ffffffМожна розподілити в здібності джина для їх покращення."
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Safe",
+    "x": 121,
+    "y": 347,
+    "w": 70,
+    "h": 25,
+    "text": "Статус ",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "hint": "Натисніть, щоб перейти в панель зміни стану джина",
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_MinusSTR",
+    "x": 132,
+    "y": 190,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/5fee73a3d5f2.png",
+     "FrameDownImage": "ui/tex/faf7ee4009b3.png",
+     "FrameOnHoverImage": "ui/tex/3f492c66460f.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_MinusAGI",
+    "x": 252,
+    "y": 190,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/5fee73a3d5f2.png",
+     "FrameDownImage": "ui/tex/faf7ee4009b3.png",
+     "FrameOnHoverImage": "ui/tex/3f492c66460f.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_MinusNIG",
+    "x": 252,
+    "y": 212,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/5fee73a3d5f2.png",
+     "FrameDownImage": "ui/tex/faf7ee4009b3.png",
+     "FrameOnHoverImage": "ui/tex/3f492c66460f.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_MinusVIT",
+    "x": 132,
+    "y": 213,
+    "w": 14,
+    "h": 14,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/5fee73a3d5f2.png",
+     "FrameDownImage": "ui/tex/faf7ee4009b3.png",
+     "FrameOnHoverImage": "ui/tex/3f492c66460f.png"
+    },
+    "tex": [
+     14,
+     14
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_OK",
+    "x": 157,
+    "y": 235,
+    "w": 60,
+    "h": 24,
+    "text": "Прийняти",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "hint": "Натисніть, щоб розподілити",
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Cancel",
+    "x": 222,
+    "y": 235,
+    "w": 60,
+    "h": 24,
+    "text": "Скасування",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "hint": "Натисніть, щоб скасувати",
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Shengyudian",
+    "x": 107,
+    "y": 165,
+    "w": 33,
+    "h": 19,
+    "text": "123",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_STR",
+    "x": 86,
+    "y": 189,
+    "w": 0,
+    "h": 0,
+    "text": "23",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_AGI",
+    "x": 201,
+    "y": 189,
+    "w": 28,
+    "h": 19,
+    "text": "233",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_VIT",
+    "x": 85,
+    "y": 212,
+    "w": 0,
+    "h": 0,
+    "text": "765",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_NIG",
+    "x": 201,
+    "y": 212,
+    "w": 0,
+    "h": 0,
+    "text": "45",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Power",
+    "x": 194,
+    "y": 78,
+    "w": 0,
+    "h": 0,
+    "text": "666",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_ReplyPower",
+    "x": 194,
+    "y": 94,
+    "w": 0,
+    "h": 0,
+    "text": "54 сек.",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Endurance",
+    "x": 194,
+    "y": 113,
+    "w": 0,
+    "h": 0,
+    "text": "445543/54546564",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_SuccinctLevel",
+    "x": -3000,
+    "y": -3000,
+    "w": 100,
+    "h": 30,
+    "text": "545/2322",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_11500160",
+    "x": 139,
+    "y": 165,
+    "w": 97,
+    "h": 21,
+    "text": "Дод. очки:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aОчко випадкового вміння\n^ffffffКожні 10 рівнів джин отримує очко випадкового вміння.\nКількість пунктів варіюється від 1 до 10.\nТут показано, що джин вже отримав очки вмінь, але їх кількість на даному рівні можна ще збільшити.\nОчки вмінь необхідні для вивчення додаткових навичок.\n^7081ffРівні 0-50: 4 очки. \n^9000ffРівні 71-80: 6 очок.\n^ffff00Рівні 81-90: 7 очок. \n^ff8400Рівні від 90 і вище: 8 очок."
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_PointEx",
+    "x": 226,
+    "y": 165,
+    "w": 67,
+    "h": 20,
+    "text": "100/100",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_280432229",
+    "x": 41,
+    "y": 236,
+    "w": 60,
+    "h": 20,
+    "text": "Зріст:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false,
+    "hint": "^ffcb4aЗростання\n^ffffffЧим вищий рівень джина, тим вищий шанс отримати додаткові очки."
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Chengzhang",
+    "x": 93,
+    "y": 237,
+    "w": 48,
+    "h": 23,
+    "text": "23231",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_160645982",
+    "x": 146,
+    "y": 274,
+    "w": 43,
+    "h": 22,
+    "text": "Предмет",
+    "font": "方正隶二简体",
+    "size": 10,
+    "color": "#ffcb4a",
+    "bold": false
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Item_1",
+    "x": 50,
+    "y": 296,
+    "w": 32,
+    "h": 32
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Item_2",
+    "x": 110,
+    "y": 296,
+    "w": 32,
+    "h": 32
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Item_3",
+    "x": 170,
+    "y": 296,
+    "w": 32,
+    "h": 32
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Item_4",
+    "x": 230,
+    "y": 296,
+    "w": 32,
+    "h": 32
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Close",
+    "x": 278,
+    "y": 19,
+    "w": 20,
+    "h": 20,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/a136c63858ed.png",
+     "FrameDownImage": "ui/tex/9113834f67ca.png",
+     "FrameOnHoverImage": "ui/tex/01103651b0cd.png"
+    },
+    "tex": [
+     20,
+     20
+    ]
+   }
+  ]
+ },
+ "Win_ELFGenius": {
+  "name": "Win_ELFGenius",
+  "w": 310,
+  "h": 460,
+  "controls": [
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg",
+    "x": 0,
+    "y": 10,
+    "w": 309,
+    "h": 447,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/e3ac4205fe02.png"
+    },
+    "tex": [
+     120,
+     120
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Light",
+    "x": 27,
+    "y": 408,
+    "w": 256,
+    "h": 34,
+    "img": {
+     "FrameImage": "ui/tex/ebaac686f43c.png"
+    },
+    "tex": [
+     173,
+     34
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg1",
+    "x": 13,
+    "y": 41,
+    "w": 283,
+    "h": 255,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/6760ca5dea33.png"
+    },
+    "tex": [
+     90,
+     90
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg2",
+    "x": 13,
+    "y": 296,
+    "w": 283,
+    "h": 146,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/6760ca5dea33.png"
+    },
+    "tex": [
+     90,
+     90
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg3",
+    "x": 24,
+    "y": 316,
+    "w": 261,
+    "h": 21,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/79157aa4b28e.png"
+    },
+    "tex": [
+     27,
+     22
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg4",
+    "x": 24,
+    "y": 385,
+    "w": 261,
+    "h": 21,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/79157aa4b28e.png"
+    },
+    "tex": [
+     27,
+     22
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg5",
+    "x": 24,
+    "y": 350,
+    "w": 261,
+    "h": 21,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/79157aa4b28e.png"
+    },
+    "tex": [
+     27,
+     22
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Title",
+    "x": 20,
+    "y": 0,
+    "w": 289,
+    "h": 63,
+    "img": {
+     "FrameImage": "ui/tex/2d6e595e143a.png"
+    },
+    "tex": [
+     298,
+     63
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_geniusBg",
+    "x": 22,
+    "y": 44,
+    "w": 267,
+    "h": 253,
+    "img": {
+     "FrameImage": "ui/tex/23b696f61ca4.png"
+    },
+    "tex": [
+     267,
+     253
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Name",
+    "x": 125,
+    "y": 8,
+    "w": 96,
+    "h": 24,
+    "text": "Стихії",
+    "font": "方正隶二简体",
+    "size": 15,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Total",
+    "x": 114,
+    "y": 46,
+    "w": 32,
+    "h": 20,
+    "text": "20",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_4",
+    "x": 188,
+    "y": 226,
+    "w": 22,
+    "h": 24,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "hint": "Натисніть, щоб збільшити здатність до стихії землі. \nЗбільшення верхньої шкали стихії на 1 показує, що здатність до стихії збільшена на 1.",
+    "img": {
+     "FrameUpImage": "ui/tex/3e3ff385571e.png",
+     "FrameDownImage": "ui/tex/07fac11b404c.png",
+     "FrameOnHoverImage": "ui/tex/2b8e55a462a7.png"
+    },
+    "tex": [
+     22,
+     24
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_2",
+    "x": 95,
+    "y": 223,
+    "w": 21,
+    "h": 27,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "hint": "Натисніть, щоб збільшити здатність до стихії води. \nЗбільшення верхньої шкали стихії на 1 показує, що здатність до стихії збільшена на 1.",
+    "img": {
+     "FrameUpImage": "ui/tex/798f01406203.png",
+     "FrameDownImage": "ui/tex/9dd25c31dc81.png",
+     "FrameOnHoverImage": "ui/tex/c9c4d38eef6e.png"
+    },
+    "tex": [
+     21,
+     27
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_1",
+    "x": 219,
+    "y": 134,
+    "w": 19,
+    "h": 28,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "hint": "Натисніть, щоб збільшити здатність до стихії дерева. \nЗбільшення лівої шкали стихії на 1 показує, що здатність збільшена на 1.",
+    "img": {
+     "FrameUpImage": "ui/tex/f4a9dd0818eb.png",
+     "FrameDownImage": "ui/tex/12c667aa705c.png",
+     "FrameOnHoverImage": "ui/tex/d47dbf6cabd7.png"
+    },
+    "tex": [
+     19,
+     28
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_3",
+    "x": 66,
+    "y": 135,
+    "w": 22,
+    "h": 26,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "hint": "Натисніть, щоб збільшити здатність до стихії вогню. \nЗбільшення правої шкали стихії на 1 показує, що здатність до стихії збільшена на 1.",
+    "img": {
+     "FrameUpImage": "ui/tex/86c703991c55.png",
+     "FrameDownImage": "ui/tex/fcec491a0ab3.png",
+     "FrameOnHoverImage": "ui/tex/e5e7886b976e.png"
+    },
+    "tex": [
+     22,
+     26
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_0",
+    "x": 141,
+    "y": 80,
+    "w": 25,
+    "h": 30,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "hint": "Натисніть, щоб збільшити здатність до стихії металу. \nЗбільшення нижньої шкали стихії на 1 показує, що здатність збільшена на 1.",
+    "img": {
+     "FrameUpImage": "ui/tex/27da5fbbde63.png",
+     "FrameDownImage": "ui/tex/1a12efd92307.png",
+     "FrameOnHoverImage": "ui/tex/4f9adbeed7ef.png"
+    },
+    "tex": [
+     25,
+     30
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_0",
+    "x": 134,
+    "y": 105,
+    "w": 35,
+    "h": 41,
+    "img": {
+     "FrameImage": "ui/tex/5f86a37c0e20.png"
+    },
+    "tex": [
+     35,
+     369
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_1",
+    "x": 175,
+    "y": 151,
+    "w": 42,
+    "h": 24,
+    "img": {
+     "FrameImage": "ui/tex/f8e08a7e2c59.png"
+    },
+    "tex": [
+     42,
+     216
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_4",
+    "x": 159,
+    "y": 189,
+    "w": 35,
+    "h": 40,
+    "img": {
+     "FrameImage": "ui/tex/a6c054c52257.png"
+    },
+    "tex": [
+     35,
+     360
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_2",
+    "x": 111,
+    "y": 189,
+    "w": 35,
+    "h": 40,
+    "img": {
+     "FrameImage": "ui/tex/520411f2232d.png"
+    },
+    "tex": [
+     35,
+     360
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_3",
+    "x": 88,
+    "y": 151,
+    "w": 42,
+    "h": 24,
+    "img": {
+     "FrameImage": "ui/tex/8653dc321cf9.png"
+    },
+    "tex": [
+     42,
+     216
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_479757200",
+    "x": 18,
+    "y": 45,
+    "w": 102,
+    "h": 22,
+    "text": "Всього очок:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#ffcb4a",
+    "bold": false,
+    "hint": "^ffcb4aРівень здібності\n^ffffffПоточний показник здібності. \nЗеленим шрифтом виділено бонус від спорядження."
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_225838935",
+    "x": 165,
+    "y": 387,
+    "w": 85,
+    "h": 23,
+    "text": "Очки:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#ffcb4a",
+    "bold": false,
+    "hint": "Немає поточних очок розподілу талантів"
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_Remain",
+    "x": 232,
+    "y": 388,
+    "w": 40,
+    "h": 22,
+    "text": "4555",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_58357546",
+    "x": 35,
+    "y": 317,
+    "w": 59,
+    "h": 20,
+    "text": "Метал:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#bcbf2b",
+    "bold": false,
+    "hint": "Поточний рівень здібності до стихії металу"
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_0",
+    "x": 102,
+    "y": 318,
+    "w": 0,
+    "h": 0,
+    "text": "23",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_58357776",
+    "x": 165,
+    "y": 317,
+    "w": 54,
+    "h": 21,
+    "text": "Дерево:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#00ff00",
+    "bold": false,
+    "hint": "Поточний рівень здібності до стихії дерева"
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_1",
+    "x": 232,
+    "y": 317,
+    "w": 0,
+    "h": 0,
+    "text": "45",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_4",
+    "x": 102,
+    "y": 387,
+    "w": 0,
+    "h": 0,
+    "text": "43",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_89099588",
+    "x": 35,
+    "y": 387,
+    "w": 55,
+    "h": 21,
+    "text": "Земля:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#c77e3d",
+    "bold": false,
+    "hint": "Поточний рівень здібності до стихії землі"
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_188943780",
+    "x": 35,
+    "y": 352,
+    "w": 48,
+    "h": 21,
+    "text": "Вода:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#80ffff",
+    "bold": false,
+    "hint": "Поточний рівень здібності до стихії води"
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_2",
+    "x": 102,
+    "y": 352,
+    "w": 0,
+    "h": 0,
+    "text": "33",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Control_57016324",
+    "x": 165,
+    "y": 353,
+    "w": 47,
+    "h": 23,
+    "text": "Вогонь:",
+    "font": "方正隶二简体",
+    "size": 12,
+    "color": "#ff0000",
+    "bold": false,
+    "hint": "Поточний рівень здібності до стихії вогню"
+   },
+   {
+    "type": "LABEL",
+    "name": "Txt_3",
+    "x": 232,
+    "y": 353,
+    "w": 0,
+    "h": 0,
+    "text": "5",
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Skilllook",
+    "x": 205,
+    "y": 411,
+    "w": 97,
+    "h": 28,
+    "text": "Список умінь",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Close",
+    "x": 278,
+    "y": 21,
+    "w": 20,
+    "h": 20,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/a136c63858ed.png",
+     "FrameDownImage": "ui/tex/9113834f67ca.png",
+     "FrameOnHoverImage": "ui/tex/01103651b0cd.png"
+    },
+    "tex": [
+     20,
+     20
+    ]
+   }
+  ]
+ },
+ "Win_Elf_Skilltree1": {
+  "name": "Win_Elf_Skilltree1",
+  "w": 533,
+  "h": 453,
+  "controls": [
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg",
+    "x": 5,
+    "y": 12,
+    "w": 522,
+    "h": 436,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/e3ac4205fe02.png"
+    },
+    "tex": [
+     120,
+     120
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "EditBox_14250688",
+    "x": 17,
+    "y": 43,
+    "w": 498,
+    "h": 393,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/6760ca5dea33.png"
+    },
+    "tex": [
+     90,
+     90
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edit_01",
+    "x": 111,
+    "y": 64,
+    "w": 394,
+    "h": 332,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/8325b53791a1.png"
+    },
+    "tex": [
+     380,
+     320
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Title",
+    "x": 77,
+    "y": 0,
+    "w": 455,
+    "h": 67,
+    "img": {
+     "FrameImage": "ui/tex/48b169c66b49.png"
+    },
+    "tex": [
+     565,
+     67
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_引雷诀",
+    "x": 320,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Тактика\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5\n^ffffffВивчається на рівнях:  ^ffffff22,27,32,37,42,47,52,57,62,67\n^ffffffЗавдає цілі грозову шкоду блискавкою, \nперериває читання заклинання, \nзавдає шкоду металом.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_大风咒",
+    "x": 120,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Прокляття вітру\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2\n^ffffffВивчається на рівнях:  ^ffffff6,11,16,21,26,31,36,41,46,51\n^ffffffЗавдає літаючим цілям шкоду металом.\nЗменшує швидкість переміщення цілі.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_回风诀",
+    "x": 120,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Рятівна буря\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3\n^ffffffВивчається на рівнях:  ^ffffff13,18,23,28,33,38,43,48,53,58\n^ffffffЗахищає, використовуючи силу вітру,\nзменшує отримувану шкоду,\nзбільшує швидкість атаки та шанс парирування.\n^e910cdВикористовується тільки в повітрі та на землі.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_气缚诀",
+    "x": 120,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Вихор\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 6\n^ffffffВивчається на рівнях:  ^ffffff29,34,39,44,49,54,59,64,69,74\n^ffffffЗв'язує ціль, можна використовувати на себе,\nє шанс запечатати ціль.\n^e910cdНе може використовувати майстер рукопашного бою.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_避金诀",
+    "x": 120,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Рятування металу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 4\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНадає цілі на короткий час імунітет до шкоди металом.\n^e910cd",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_奔雷击",
+    "x": 120,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Удар блискавки\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 7\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffВипускає в ціль кулю блискавки,\nможливе нанесення критичного удару.\nЗавдає шкоду металом, за певних умов можливий смертельний удар.\n^e910cdОбмеження за класом.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_电舞",
+    "x": 120,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Електричний танець\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 8\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗакликає кілька тетеревів, які атакують ціль, \nзавдає цілям, що знаходяться на відстані до 12 метрів, шкоду металом.\nМоже викликати запаморочення \n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_醒神诀",
+    "x": 160,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Рятування духу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffІмунітет до сну на короткий час.",
+    "img": {
+     "FrameImage": "ui/tex/01cb05348fd0.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_无常蛊",
+    "x": 160,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Непостійність\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffНа ціль викликається отруйна комаха,\nяка має три різні види отрути:\nзменшуючої ЖС; \nзменшуючої МН;\nзменшуючої дух;\nзменшуючої швидкість пересування.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_混元法印",
+    "x": 160,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Первозданна печатка\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffЗбільшує власний імунітет до всього на короткий час.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_碎心咒",
+    "x": 160,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Розбите прокляття\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 8\n^ffffffВивчається на рівнях:  ^ffffff36,41,46,51,56,61,66,71,76,81\n^ffffffЗменшує магічну захист цілі,\nзбільшує фізичну захист,\nсильно зменшує швидкість руху цілі.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_灭魄真诀",
+    "x": 160,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Секрет духа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНаносить цілі глибокі рани, може з'явитися як ефект від використання вміння 'Гнів небес'.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_百毒不侵",
+    "x": 160,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Сотий яд\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 3\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffНа короткий час зменшує імунітет до шкоди деревом.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_残神诀",
+    "x": 160,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Тактика бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffВідбирає у цілі певну кількість життєвої сили \nі протягом 3 секунд наносить шкоду стихією дерева, пропорційну відібраній кількості життєвої сили.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_悲酥印",
+    "x": 200,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Клеймо печалі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffЗводить ціль з розуму.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_明王咒",
+    "x": 160,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^2c6629Прокляття князя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5\n^ffffffВивчається на рівнях:  ^ffffff21,26,31,36,41,46,51,56,61,66\n^ffffffНа короткий час дає власний імунітет до запаморочення,\nале може зменшити магічну захист.",
+    "img": {
+     "FrameImage": "ui/tex/08e658ecd7dc.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_神定真言",
+    "x": 200,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eІстина бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНа короткий час дає імунітет до сильних пошкоджень.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_狂暴",
+    "x": 200,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eЛють\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffЦіль впадає в лють, \nфізична і магічна захист зменшується, \nатака збільшується.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_闪光术",
+    "x": 240,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eСпалах блискавки\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffНаносить найближчим ворогам шкоду блискавкою,\nзменшує шанс критичного удару і швидкість.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_风啸诀",
+    "x": 200,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eСила урагану\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 8\n^ffffffВивчається на рівнях:  ^ffffff37,42,47,52,57,62,67,72,77,82\n^ffffffНаносить шкоду оточуючим противникам,\nв той же час зменшує власну швидкість.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_太极",
+    "x": 200,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eВеликий межа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗбільшує швидкість руху цілі та відновлення ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_玄沙罩",
+    "x": 200,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eЗахист Чжао\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff11,16,21,26,31,36,41,46,51,56\n^ffffffДає цілі на короткий час імунітет до шкоди землею, \nтрохи збільшує лють.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_地之击",
+    "x": 200,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eАтака землі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЗупиняє ціль.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_地恸诀",
+    "x": 200,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^8b570eСкорбота землі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffНаносить шкоду оточуючим цілям, \nвипадковий ефект.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/4a14a71f2c4f.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_消魂咒",
+    "x": 240,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Прокляття божевілля\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗменшує як свою ЖС, так і ЖС цілі.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_玄冰咒",
+    "x": 240,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Кривавий привид\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffМоже заморозити ціль.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_回复波纹.长春",
+    "x": 280,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Розплата. Роза\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff4,8,13,18,23,28,33,38,43,48\n^ffffffНа тривалий час збільшує ЖС союзників.\n^e910cdОбмеження за класом - жрець\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_噬灵诀",
+    "x": 240,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Таємниця духа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffПоглинає ЖС цілі, \nперетворюючи її в власну ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_战斗波纹.湮灭",
+    "x": 240,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Битва сильфа. Знищення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 8\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗменшує власну захист і захист цілі від води.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_战斗波纹.命运",
+    "x": 400,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^f7df12Закляття крові\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffНадає на певний час імунітет до кровотечі.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_辅助波纹.幸运",
+    "x": 240,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Допомога сильфа. Удача\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffЗбільшує як свою, так і членів групи, можливість збити ціль з ніг.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_水龙吟",
+    "x": 240,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Водяний дракон\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНаносить цілі шкоду водою, \nпошкоджує броню цілі, зменшуючи фізичну шкоду.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_子母火雷咒",
+    "x": 280,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dМати і дитя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff8,13,18,23,28,33,38,43,48,53\n^ffffffНаносить шкоду вогнем і знижує захист цілі від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_火炎破",
+    "x": 320,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dВогняний потік\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffПовністю витрачається накопичена енергія,\n цілі наноситься шкода (незалежно від кількості енергії). \nЧим більше витрачається енергії, тим більше шкода.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_焚心咒",
+    "x": 320,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dГубительний вогонь\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffНаносить цілі шкоду вогнем,\nзменшує швидкість атаки і швидкість читання заклинань цілі.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_阴阳印",
+    "x": 280,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dПечатка Інь-Ян\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff16,21,26,31,36,41,46,51,56,61\n^ffffffНаносить цілі шкоду вогнем,\nзменшує її атаку.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_天火咒",
+    "x": 280,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dПрокляття вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 3\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffПротягом певного часу завдає шкоди вогнем.\nЦіль отримує шкоду від вогню,\nяка залежить від захисту від вогню та води: \nчим вищий захист від вогню, тим нижча шкода,\nчим сильніший захист від води, тим більша шкода від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_离火神诀",
+    "x": 280,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dБог вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 6\n^ffffffВивчається на рівнях:  ^ffffff28,33,38,43,48,53,58,63,68,73\n^ffffffНаносить масове ураження вогнем,\nзменшує захист від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_寂灭",
+    "x": 280,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dБезмовність\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНаносить цілі шкоду вогнем,\n в той же час може зупинити ціль.\nНаносить шкоду, рівну критичному удару персонажа.\n^e910cdОбмеження за класом - лучник, перевертень",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_天雷破",
+    "x": 280,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^d7131dУдар з неба\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffЗавдає цілі колосальний \nшкоду металом.",
+    "img": {
+     "FrameImage": "ui/tex/d9a723c731c6.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_拙火定",
+    "x": 360,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffГрубе полум'я\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff9,14,19,24,29,34,39,44,49,54\n^ffffffПоглинає фізичний і магічний шкоду,\nв той же час зменшуючи власну швидкість пересування.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_泥泞",
+    "x": 400,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffБруд\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffЗменшує швидкість пересування і захист цілі та оточуючих її супротивників.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_烈焰刀",
+    "x": 440,
+    "y": 111,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВогняний меч\n^ffffffМаксимальний рівень: 10\n^ffffffВимога до елемента: ^f7df12 метал1^d7131dВогонь1\n^ffffffРозвиток (рівні): ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffНаносить цілі фізичний шкоду вогнем,\n^e910cdна землі шкода подвоюється.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_叶舞阵",
+    "x": 320,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffТанець листя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^2c6629 Дерево 1^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗбільшує шанс критичної атаки.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_守护",
+    "x": 360,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗахисник\n^ffffffМакс. рівень 10\n^ffffffВимога до елементів:  ^2c6629 Дерево 3^15b2d9  Вода 4\n^ffffffВивчається на рівнях:  ^ffffff31, 36, 41, 46, 51, 56, 61, 66, 71, 76\n^ffffffЗбільшує максимальний показник ЖС.\nКожні 3 секунди відновлює частину ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_火魂",
+    "x": 400,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВогонь душі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1^d7131d Вогонь 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffНа короткий час дає імунітет до шкоди вогнем.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_火炼真金",
+    "x": 440,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Сльоза бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 5\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffПротягом певного часу ціль отримує шкоду водою, при цьому її захист від води зменшується.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_空裂爪",
+    "x": 360,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffТреснуті кігті\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffНаносить цілі фізичний шкоду металом,\nзменшує фізичну захист цілі, наносить шкоду кровотечею.\n^e910cdОбмеження по класу - друїд\n^e910cdВикористовувати тільки на землі",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_天剑诀",
+    "x": 320,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffКлинок світла\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНа виконання фізичної атаки витрачається вся енергія.\n Атака обов'язково потрапляє в ціль.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_辅助波纹.毒素",
+    "x": 360,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffДопомога сильфа. Отрута\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2^15b2d9 Вода 2\n^ffffffВивчається на рівнях:  ^ffffff18,23,28,33,38,43,48,53,58,63\n^ffffffЗменшує максимальну кількість ЖС цілі, \nможе перервати читання заклинання цілі.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_龙卷诀",
+    "x": 400,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffТорнадо\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 2^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffОшеломлює ціль на 2 секунди,\n знижує швидкість її переміщення.\nНе діє на летючу ціль.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_金刚吼",
+    "x": 440,
+    "y": 191,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffГнів металу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 1^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff16,21,26,31,36,41,46,51,56,61\n^ffffffМоже зняти поточні негативні закляття.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_封印",
+    "x": 320,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffПечатка^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗапечатує ціль.\n^e910cdНе може використовувати майстра рукопашного бою.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_水火护甲",
+    "x": 280,
+    "y": 351,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗахист від вогню та води\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 4^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff38,43,48,53,58,63,68,73,78,83\n^ffffffЗменшує отримувану шкоду,\nале збільшує кількість отримуваних пошкоджень.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_气缚咒",
+    "x": 360,
+    "y": 71,
+    "w": 34,
+    "h": 34,
+    "hint": "^15b2d9Зцілення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffВласне зцілення отриманих поранень, зменшує кровотечу.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_大地波纹.死亡",
+    "x": 360,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗемний сильф. Смерть\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 2^d7131d Вогонь 2^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffПротягом деякого часу зменшує життєві сили цілі.\nУміння можна застосувати проти цілі єдиноразово.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/d2b8a235c469.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_彩虹祝福",
+    "x": 400,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffБлагословення райдуги\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 2^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffМоже збити ціль з ніг,\n збільшує фізичну силу цілі,  силу фізичної та магічної атаки, швидкість читання заклинань.\n^e910cdОбмеження за класом - жрець",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_战歌",
+    "x": 240,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffБойовий клич\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2^d7131d Вогонь 1^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff23,28,33,38,43,48,53,58,63,68\n^ffffffЗбільшує власну швидкість атаки, швидкість руху та читання заклинань.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_大地波纹.愤怒",
+    "x": 320,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗемний сильф. Гнів\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff28,33,38,43,48,53,58,63,68,73\n^ffffffНа короткий час збільшує лють членів групи.\n^e910cdОбмеження за класом - перевертень\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_困缚",
+    "x": 360,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВузол страждань\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЗв'язує найближчу ціль, завдаючи їй шкоду,\nна короткий час може зменшити імунітет.\n^e910cdОбмеження по класу - стрілець",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_神行真言",
+    "x": 400,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffСлово істини\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2^2c6629 Дерево 2^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffНа короткий час значно збільшує швидкість заклинача.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_困神诀",
+    "x": 440,
+    "y": 271,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffГнів воїна\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3^15b2d9 Вода 3\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffНаносить цілі масивний шкоду, одночасно створюючи власний щит, що поглинає магічний шкоду.\nПодвоєна атака по летючим цілям.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_地裂爪",
+    "x": 440,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffРозсікаючий кіготь\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 4^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffВражає ціль на відстані, завдає шкоду землею. \n^e910cdВикористовується тільки на землі; пошкодження землею збільшуються в 3 рази.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_神风之触",
+    "x": 400,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffКамікадзе\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 4^d7131d Вогонь 3\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЄ ймовірність зняти з себе запаморочення.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_破法经",
+    "x": 320,
+    "y": 311,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffТаємна молитва\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЙмовірний ефект: зняття печатки з себе.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_回光返照",
+    "x": 360,
+    "y": 151,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВідбитий світло\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629Дерево1^8b570eЗемля1^15b2d9Вода1\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffМиттєво відновлює життєві сили.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_1级",
+    "x": 26,
+    "y": 78,
+    "w": 91,
+    "h": 21,
+    "text": "1 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_Title",
+    "x": 177,
+    "y": 9,
+    "w": 224,
+    "h": 28,
+    "text": "Початкові вміння",
+    "font": "方正隶二简体",
+    "size": 16,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_2级",
+    "x": 26,
+    "y": 118,
+    "w": 117,
+    "h": 23,
+    "text": "2 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_3级",
+    "x": 26,
+    "y": 158,
+    "w": 93,
+    "h": 22,
+    "text": "3 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_4级",
+    "x": 26,
+    "y": 198,
+    "w": 130,
+    "h": 23,
+    "text": "4 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_5级",
+    "x": 26,
+    "y": 238,
+    "w": 124,
+    "h": 26,
+    "text": "5 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_6级",
+    "x": 26,
+    "y": 278,
+    "w": 149,
+    "h": 24,
+    "text": "6 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_7级",
+    "x": 26,
+    "y": 318,
+    "w": 142,
+    "h": 24,
+    "text": "7 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_8级",
+    "x": 26,
+    "y": 358,
+    "w": 100,
+    "h": 21,
+    "text": "8 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Senior",
+    "x": 406,
+    "y": 405,
+    "w": 110,
+    "h": 24,
+    "text": "Додаткові",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/cfe68a5d501c.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_引雷诀",
+    "x": 322,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Тактика\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5\n^ffffffВивчається на рівнях:  ^ffffff22,27,32,37,42,47,52,57,62,67\n^ffffffЗавдає цілі грозову шкоду блискавкою, \nперериває читання заклинання, \nзавдає шкоду металом.",
+    "img": {
+     "FrameImage": "ui/tex/a72c0fa5ca3b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_大风咒",
+    "x": 122,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Прокляття вітру\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2\n^ffffffВивчається на рівнях:  ^ffffff6,11,16,21,26,31,36,41,46,51\n^ffffffЗавдає літаючим цілям шкоду металом.\nЗменшує швидкість переміщення цілі.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/198cfe55f7d0.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_回风诀",
+    "x": 122,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Рятівна буря\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3\n^ffffffВивчається на рівнях:  ^ffffff13,18,23,28,33,38,43,48,53,58\n^ffffffЗахищає, використовуючи силу вітру,\nзменшує отримувану шкоду,\nзбільшує швидкість атаки та шанс парирування.\n^e910cdВикористовується тільки в повітрі та на землі.",
+    "img": {
+     "FrameImage": "ui/tex/37e166eadbaf.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_气缚诀",
+    "x": 122,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Вихор\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 6\n^ffffffВивчається на рівнях:  ^ffffff29,34,39,44,49,54,59,64,69,74\n^ffffffЗв'язує ціль, також є шанс зв'язати себе\nє шанс запечатати ціль.\n^e910cdНе може використовувати майстер рукопашного бою.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/502be6144b6e.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_避金诀",
+    "x": 122,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Рятування металу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 4\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНадає цілі на короткий час імунітет до шкоди металом.\n^e910cd",
+    "img": {
+     "FrameImage": "ui/tex/847bf3480fa2.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_奔雷击",
+    "x": 122,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Удар блискавки\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 7\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffВипускає в ціль кулю блискавки,\nможливе нанесення критичного удару.\nЗавдає шкоду металом, за певних умов можливий смертельний удар.\n^e910cdОбмеження за класом.\n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/ffd93842e805.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_电舞",
+    "x": 122,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Електричний танець\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 8\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗакликає кілька тетеревів, які атакують ціль, \nзавдає цілям, що знаходяться на відстані до 12 метрів, шкоду металом.\nМоже викликати запаморочення \n^e910cdВикористовується тільки в повітрі.",
+    "img": {
+     "FrameImage": "ui/tex/dda4b76a1721.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_醒神诀",
+    "x": 162,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Рятування духу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffІмунітет до сну на короткий час.",
+    "img": {
+     "FrameImage": "ui/tex/6860df29c420.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_无常蛊",
+    "x": 162,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Непостійність\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffНа ціль викликається отруйна комаха,\nяка має три різні види отрути:\nзменшуючої ЖС; \nзменшуючої МН;\nзменшуючої дух;\nзменшуючої швидкість пересування.",
+    "img": {
+     "FrameImage": "ui/tex/fff818102a2b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_混元法印",
+    "x": 162,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Первозданна печатка\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffЗбільшує власний імунітет до всього на короткий час.",
+    "img": {
+     "FrameImage": "ui/tex/fde7bf6249d7.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_碎心咒",
+    "x": 162,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Розбите прокляття\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 8\n^ffffffВивчається на рівнях:  ^ffffff36,41,46,51,56,61,66,71,76,81\n^ffffffЗменшує магічну захист цілі,\nзбільшує фізичну захист,\nсильно зменшує швидкість руху цілі.",
+    "img": {
+     "FrameImage": "ui/tex/11922a909c3e.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_灭魄真诀",
+    "x": 162,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Секрет духа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНаносить цілі глибокі рани, може з'явитися як ефект від використання вміння 'Гнів небес'.",
+    "img": {
+     "FrameImage": "ui/tex/ddfea688dadc.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_百毒不侵",
+    "x": 162,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Сотий яд\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 3\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffНа короткий час зменшує імунітет до шкоди деревом.",
+    "img": {
+     "FrameImage": "ui/tex/539da4890ac1.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_残神诀",
+    "x": 162,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Тактика бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffВідбирає у цілі певну кількість життєвої сили \nі протягом 3 секунд наносить шкоду стихією дерева, пропорційну відібраній кількості життєвої сили.",
+    "img": {
+     "FrameImage": "ui/tex/b1f985dee882.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_悲酥印",
+    "x": 202,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Клеймо печалі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffЗводить ціль з розуму.",
+    "img": {
+     "FrameImage": "ui/tex/6be0fe457864.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_明王咒",
+    "x": 162,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^2c6629Прокляття князя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5\n^ffffffВивчається на рівнях:  ^ffffff21,26,31,36,41,46,51,56,61,66\n^ffffffНа короткий час дає власний імунітет до запаморочення,\nале може послабити магічну захист.",
+    "img": {
+     "FrameImage": "ui/tex/17f9cda93ecf.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_神定真言",
+    "x": 202,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eІстина бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНа короткий час дає імунітет до сильних пошкоджень.",
+    "img": {
+     "FrameImage": "ui/tex/193da537f135.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_狂暴",
+    "x": 202,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eЛють\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffЦіль впадає в лють, при цьому\nзменшується фізична і магічна захист,\nале підвищується показник атаки.",
+    "img": {
+     "FrameImage": "ui/tex/5c265da7a701.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_闪光术",
+    "x": 242,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eСпалах блискавки\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffНаносить найближчим ворогам шкоду блискавкою,\nзменшує шанс критичного удару і швидкість.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/cf9b3143cf87.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_风啸诀",
+    "x": 202,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eСила урагану\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 8\n^ffffffВивчається на рівнях:  ^ffffff37,42,47,52,57,62,67,72,77,82\n^ffffffНаносить шкоду оточуючим противникам,\nв той же час зменшує власну швидкість.",
+    "img": {
+     "FrameImage": "ui/tex/1aae3b94af75.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_太极",
+    "x": 202,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eВеликий межа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗбільшує швидкість руху цілі та відновлення ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/b93d82ca42d9.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_玄沙罩",
+    "x": 202,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eЗахист Чжао\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff11,16,21,26,31,36,41,46,51,56\n^ffffffДає цілі на короткий час імунітет до шкоди землею, \nтрохи збільшує лють.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/52c1c1838d8a.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_地之击",
+    "x": 202,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eАтака землі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЗупиняє ціль.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/39d67551db17.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_地恸诀",
+    "x": 202,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^8b570eСкорбота землі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffНаносить шкоду оточуючим цілям, \nвипадковий ефект.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/6a6104533793.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_消魂咒",
+    "x": 242,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Прокляття божевілля\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗменшує як свою ЖС, так і ЖС цілі.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/1d9bc3146185.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_玄冰咒",
+    "x": 242,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Кривавий привид\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 7\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffМоже заморозити ціль.",
+    "img": {
+     "FrameImage": "ui/tex/938a0c0eb270.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_回复波纹.长春",
+    "x": 282,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Розплата. Роза\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff4,8,13,18,23,28,33,38,43,48\n^ffffffНа тривалий час збільшує ЖС союзників.\n^e910cdОбмеження за класом - жрець\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/ca7b6cddac61.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_噬灵诀",
+    "x": 242,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Таємниця духа\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffПоглинає ЖС цілі, \nперетворюючи її в власну ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/ae91f62d6281.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_战斗波纹.湮灭",
+    "x": 242,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Битва сильфа. Знищення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 8\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗменшує власну захист і захист цілі від води.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/194efe40c4de.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_战斗波纹.命运",
+    "x": 402,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^f7df12Закляття крові\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffНадає на певний час імунітет до кровотечі.",
+    "img": {
+     "FrameImage": "ui/tex/cbeb14b2fb63.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_辅助波纹.幸运",
+    "x": 242,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Допомога сильфа. Удача\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 2\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffЗбільшує як свою, так і членів групи, можливість збити ціль з ніг.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/3f42b1890b68.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_水龙吟",
+    "x": 242,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Водяний дракон\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 4\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНаносить цілі шкоду водою, \nпошкоджує броню цілі, зменшуючи фізичну шкоду.",
+    "img": {
+     "FrameImage": "ui/tex/0587fade3d27.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_子母火雷咒",
+    "x": 282,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dМати і дитя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff8,13,18,23,28,33,38,43,48,53\n^ffffffЗменшує захист цілі від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/68e8e33d7b8b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_火炎破",
+    "x": 322,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dВогняний потік\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 1\n^ffffffВивчається на рівнях:  ^ffffff1,5,10,15,20,25,30,35,40,45\n^ffffffПовністю витрачається накопичена енергія,\n цілі наноситься шкода (незалежно від кількості енергії). \nЧим більше витрачається енергії, тим більше шкода.",
+    "img": {
+     "FrameImage": "ui/tex/248ecb4eedec.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_焚心咒",
+    "x": 322,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dГубительний вогонь\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffНаносить цілі шкоду вогнем,\nЗменшує атаку і швидкість читання заклинань цілі.",
+    "img": {
+     "FrameImage": "ui/tex/9edcb4711896.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_阴阳印",
+    "x": 282,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dПечатка Інь-Ян\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff16,21,26,31,36,41,46,51,56,61\n^ffffffНаносить цілі шкоду вогнем,\nзменшує її атаку.",
+    "img": {
+     "FrameImage": "ui/tex/b8480f87647f.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_天火咒",
+    "x": 282,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dПрокляття вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 3\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffПротягом певного часу завдає шкоди вогнем.\nЦіль отримує шкоду від вогню,\nяка залежить від захисту від вогню та води: \nчим вищий захист від вогню, тим нижча шкода,\nчим сильніший захист від води, тим більша шкода від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/3135c65d261c.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_离火神诀",
+    "x": 282,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dБог вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 6\n^ffffffВивчається на рівнях:  ^ffffff28,33,38,43,48,53,58,63,68,73\n^ffffffНаносить масове ураження вогнем,\nзменшує захист від вогню.",
+    "img": {
+     "FrameImage": "ui/tex/0d08f19462a3.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_寂灭",
+    "x": 282,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dБезмовність\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffНаносить цілі шкоду вогнем,\n в той же час може зупинити ціль.\nНаносить шкоду, рівну критичному удару персонажа.\n^e910cdОбмеження за класом - лучник, перевертень",
+    "img": {
+     "FrameImage": "ui/tex/af5a3dda3664.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_天雷破",
+    "x": 282,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^d7131dУдар з неба\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffЗавдає цілі колосальний \nшкоду металом.",
+    "img": {
+     "FrameImage": "ui/tex/fb97fb9ac5bf.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_拙火定",
+    "x": 362,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffГрубе полум'я\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff9,14,19,24,29,34,39,44,49,54\n^ffffffПоглинає фізичний і магічний шкоду,\nв той же час зменшуючи власну швидкість пересування.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/9baa81a84c5b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_泥泞",
+    "x": 402,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffБруд\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffЗменшує швидкість пересування і захист цілі та оточуючих її супротивників.",
+    "img": {
+     "FrameImage": "ui/tex/3869b8862eef.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_烈焰刀",
+    "x": 442,
+    "y": 113,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВогняний меч\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^d7131d Вогонь 1\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffНаносить цілі фізичний шкоду вогнем,\nзменшує її захист від металу.",
+    "img": {
+     "FrameImage": "ui/tex/cf2d90be792d.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_叶舞阵",
+    "x": 322,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffТанець листя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^2c6629 Дерево 1^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffЗбільшує шанс критичної атаки.",
+    "img": {
+     "FrameImage": "ui/tex/88cff6aa2d61.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_守护",
+    "x": 362,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗахисник\n^ffffffМакс. рівень 10\n^ffffffВимога до елементів:  ^2c6629 Дерево 3^15b2d9  Вода 4\n^ffffffВивчається на рівнях:  ^ffffff31, 36, 41, 46, 51, 56, 61, 66, 71, 76\n^ffffffЗбільшує максимальний показник ЖС.\nКожні 3 секунди відновлює частину ЖС.",
+    "img": {
+     "FrameImage": "ui/tex/8a95e5459132.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_火魂",
+    "x": 402,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВогонь душі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1^d7131d Вогонь 1^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff10,15,20,25,30,35,40,45,50,55\n^ffffffНа короткий час дає імунітет до шкоди вогнем.",
+    "img": {
+     "FrameImage": "ui/tex/265329efecfd.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_火炼真金",
+    "x": 442,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Сльоза бога\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 5\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffПротягом певного часу ціль отримує шкоду водою, при цьому її захист від води зменшується.",
+    "img": {
+     "FrameImage": "ui/tex/ab04c8899b4a.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_空裂爪",
+    "x": 362,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffТреснуті кігті\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffНаносить цілі фізичний шкоду металом,\nзменшує фізичну захист цілі, наносить шкоду кровотечею.\n^e910cdОбмеження по класу - друїд\n^e910cdВикористовувати тільки на землі",
+    "img": {
+     "FrameImage": "ui/tex/af1f9b805463.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_天剑诀",
+    "x": 322,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffКлинок світла\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffНа виконання фізичної атаки витрачається вся енергія.\n Атака обов'язково потрапляє в ціль.",
+    "img": {
+     "FrameImage": "ui/tex/93ff4aa6b685.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_辅助波纹.毒素",
+    "x": 362,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffДопомога сильфа. Отрута\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2^15b2d9 Вода 2\n^ffffffВивчається на рівнях:  ^ffffff18,23,28,33,38,43,48,53,58,63\n^ffffffЗменшує максимальну кількість ЖС цілі, \nможе перервати читання заклинання цілі.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/47a50ea9809f.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_龙卷诀",
+    "x": 402,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffТорнадо\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 2^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff15,20,25,30,35,40,45,50,55,60\n^ffffffОшеломлює ціль на 2 секунди,\n знижує швидкість її переміщення.\nНе діє на летючу ціль.",
+    "img": {
+     "FrameImage": "ui/tex/3507227a6c28.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_金刚吼",
+    "x": 442,
+    "y": 193,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffГнів металу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 1^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff16,21,26,31,36,41,46,51,56,61\n^ffffffМоже зняти поточні негативні закляття.",
+    "img": {
+     "FrameImage": "ui/tex/f0306a2a4379.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_封印",
+    "x": 322,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffПечатка^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff35,40,45,50,55,60,65,70,75,80\n^ffffffЗапечатує ціль.\n^e910cdНе може використовувати майстра рукопашного бою.",
+    "img": {
+     "FrameImage": "ui/tex/8a5df4e8605a.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_水火护甲",
+    "x": 282,
+    "y": 353,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗахист від вогню та води\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 4^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff38,43,48,53,58,63,68,73,78,83\n^ffffffНа короткий час зменшує отримувану шкоду,\nале збільшує кількість отримуваних пошкоджень.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/1b1de34b9de1.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_气缚咒",
+    "x": 362,
+    "y": 73,
+    "w": 30,
+    "h": 30,
+    "hint": "^15b2d9Зцілення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 1\n^ffffffВивчається на рівнях:  ^ffffff5,10,15,20,25,30,35,40,45,50\n^ffffffВласне зцілення отриманих поранень, зменшує кровотечу.",
+    "img": {
+     "FrameImage": "ui/tex/43e2f78aa385.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_大地波纹.死亡",
+    "x": 362,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗемний сильф. Смерть\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 2^d7131d Вогонь 2^8b570e Земля 1\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffПротягом деякого часу зменшує життєві сили цілі.\nУміння можна застосувати проти цілі єдиноразово.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/f970d906e6bb.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_彩虹祝福",
+    "x": 402,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffБлагословення райдуги\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 1^15b2d9 Вода 2^d7131d Вогонь 2\n^ffffffВивчається на рівнях:  ^ffffff20,25,30,35,40,45,50,55,60,65\n^ffffffМоже збити ціль з ніг,\n збільшує фізичну силу цілі,  силу фізичної та магічної атаки, швидкість читання заклинань.\n^e910cdОбмеження за класом - жрець",
+    "img": {
+     "FrameImage": "ui/tex/a15cdc1915b0.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_战歌",
+    "x": 242,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffБойовий клич\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 2^d7131d Вогонь 1^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff23,28,33,38,43,48,53,58,63,68\n^ffffffЗбільшує власну швидкість атаки, швидкість руху та читання заклинань.",
+    "img": {
+     "FrameImage": "ui/tex/bc534301172d.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_大地波纹.愤怒",
+    "x": 322,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗемний сильф. Гнів\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff28,33,38,43,48,53,58,63,68,73\n^ffffffНа короткий час збільшує лють членів групи.\n^e910cdОбмеження за класом - перевертень\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/4cea1f1723a6.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_困缚",
+    "x": 362,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВузол страждань\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЗв'язує найближчу ціль, завдаючи їй шкоду,\nна короткий час може зменшити імунітет.\n^e910cdОбмеження по класу - стрілець",
+    "img": {
+     "FrameImage": "ui/tex/63f57c2e6804.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_神行真言",
+    "x": 402,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffСлово істини\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 2^2c6629 Дерево 2^8b570e Земля 2\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffНа короткий час значно збільшує швидкість заклинача.",
+    "img": {
+     "FrameImage": "ui/tex/17aa91238f57.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_困神诀",
+    "x": 442,
+    "y": 273,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffГнів воїна\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3^15b2d9 Вода 3\n^ffffffВивчається на рівнях:  ^ffffff25,30,35,40,45,50,55,60,65,70\n^ffffffЗаклинач виливає свій гнів на найближчу ціль.\nВитрачається енергія,\\при цьому цілі атаки завдається великий шкода,\nодночасно створюється власний щит, що поглинає магічний шкоду.\nЛетючі цілі отримують потрійний шкоду.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/500f376f2391.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_地裂爪",
+    "x": 442,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffРозсікаючий кіготь\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 4^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffВражає ціль на відстані, завдає шкоду землею. \n^e910cdВикористовується тільки на землі; пошкодження землею збільшуються в 3 рази.",
+    "img": {
+     "FrameImage": "ui/tex/4234084cb69b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_神风之触",
+    "x": 402,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffКамікадзе\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 4^d7131d Вогонь 3\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЄ ймовірність зняти з себе запаморочення.",
+    "img": {
+     "FrameImage": "ui/tex/6ee4cfc7aaf0.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_破法经",
+    "x": 322,
+    "y": 313,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffТаємна молитва\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 3^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff30,35,40,45,50,55,60,65,70,75\n^ffffffЙмовірний ефект: зняття печатки з себе.",
+    "img": {
+     "FrameImage": "ui/tex/be91f64bb1b8.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_回光返照",
+    "x": 362,
+    "y": 153,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВідбитий світло\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629Дерево1^8b570eЗемля1^15b2d9Вода1\n^ffffffВивчається на рівнях:  ^ffffff31,36,41,46,51,56,61,66,71,76\n^ffffffМиттєво відновлює життєві сили.",
+    "img": {
+     "FrameImage": "ui/tex/768ee7a404a7.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_气缚",
+    "x": 120,
+    "y": 231,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffПрокляття повітря\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал2^15b2d9Вода1^8b570eЗемля2\n^ffffffВивчається на рівнях: ^ffffff22,27,32,37,42,47,52,57,62,67\n^ffffffНакладає печатку на ціль.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_气缚",
+    "x": 122,
+    "y": 233,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffПрокляття повітря\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал2^15b2d9Вода1^8b570eЗемля2\n^ffffffВивчається на рівнях: ^ffffff22,27,32,37,42,47,52,57,62,67\n^ffffffНакладає печатку на ціль.",
+    "img": {
+     "FrameImage": "ui/tex/027d1b89381b.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Close",
+    "x": 495,
+    "y": 22,
+    "w": 20,
+    "h": 20,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/a136c63858ed.png",
+     "FrameDownImage": "ui/tex/9113834f67ca.png",
+     "FrameOnHoverImage": "ui/tex/01103651b0cd.png"
+    },
+    "tex": [
+     20,
+     20
+    ]
+   }
+  ]
+ },
+ "Win_Elf_Skilltree2": {
+  "name": "Win_Elf_Skilltree2",
+  "w": 531,
+  "h": 441,
+  "controls": [
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg",
+    "x": 5,
+    "y": 12,
+    "w": 519,
+    "h": 426,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/e3ac4205fe02.png"
+    },
+    "tex": [
+     120,
+     120
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edi_Bg2",
+    "x": 18,
+    "y": 42,
+    "w": 493,
+    "h": 384,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/6760ca5dea33.png"
+    },
+    "tex": [
+     90,
+     90
+    ]
+   },
+   {
+    "type": "EDIT",
+    "name": "Edit_01",
+    "x": 127,
+    "y": 71,
+    "w": 377,
+    "h": 312,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 15,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameImage": "ui/tex/8325b53791a1.png"
+    },
+    "tex": [
+     380,
+     320
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Img_Title",
+    "x": 75,
+    "y": 0,
+    "w": 455,
+    "h": 67,
+    "img": {
+     "FrameImage": "ui/tex/48b169c66b49.png"
+    },
+    "tex": [
+     565,
+     67
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能6",
+    "x": -11155,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能5",
+    "x": -11155,
+    "y": 236,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_元气盗窃",
+    "x": 195,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffКрадіжка життя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 7^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗабирає ЖС цілі, відновлюючи власну ЖС, \nале потім швидко відновлює ЖС цілі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_群嘲",
+    "x": 235,
+    "y": 76,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffКровна помста\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff40,45,50,55,60,65,70,75,80,85\n^ffffffБ'є силою ненависті по найближчим супротивникам \nі відображає фізичний шкоду по собі в ближньому бою.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_凤舞",
+    "x": 195,
+    "y": 196,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffТанець феніксів\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^15b2d9 Вода 4^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff55,60,65,70,75,80,85,90,95,99\n^ffffffНаносить шкоду всім ближнім ворогам, \nзменшує силу атаки.\n^e910cdОбмеження по класу - стрілець",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能4",
+    "x": 195,
+    "y": 156,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_潜能激发",
+    "x": 195,
+    "y": 116,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffУдар сили\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 5^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff45,50,55,60,65,70,75,80,85,90\n^ffffffЄ шанс усыпити ціль, запечатати, обмежити швидкість, зменшити імунітет.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_寒冰领域",
+    "x": 235,
+    "y": 156,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЛьодовик\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff52,57,62,67,72,77,82,87,92,97\n^ffffffЗупиняє ціль, \nзменшує її швидкість атаки і читання заклинань.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_法师之星",
+    "x": 275,
+    "y": 76,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗірка майстра\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3^d7131d Вогонь 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff41,46,51,56,61,66,71,76,81,86\n^ffffffЧастина ЖС передається в швидкість, \nпоглинається магічний шкоду.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_冰暴",
+    "x": 235,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЛедяний шторм\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗменшує максимальну кількість ЖС цілі та найближчих супротивників.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_荆棘之怒",
+    "x": 235,
+    "y": 236,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffШип гніву\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 6^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНайближчі противники отримують шкоду деревом, \nтакож зменшується їх ЖС.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_虚弱咒",
+    "x": 235,
+    "y": 116,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffСлабкі чари\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5^15b2d9 Вода 5\n^ffffffВивчається на рівнях:  ^ffffff46,51,56,61,66,71,76,81,86,91\n^ffffffЗменшує швидкість атаки цілі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_绝对领域",
+    "x": 235,
+    "y": 196,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЧиста сфера\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 4^15b2d9 Вода 4^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff55,60,65,70,75,80,85,90,95,99\n^ffffffРобить персонажа неуразливим і дає імунітет до обездвижування на короткий час.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_水火符",
+    "x": 275,
+    "y": 116,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗнак води і вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 5^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff47,52,57,62,67,72,77,82,87,92\n^ffffffЦіль отримує шкоду водою і вогнем, \nє шанс зменшити ЖС цілі і зупинити її.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能2",
+    "x": 315,
+    "y": 76,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能3",
+    "x": 315,
+    "y": 116,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_灵气爆发",
+    "x": 275,
+    "y": 196,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffСпалах енергії\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал 7^8b570e Земля 5\n^ffffffВивчається на рівнях: ^ffffff55,60,65,70,75,80,85,90,95,99\n^ffffffЗбільшує запас ци.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_破魔咒",
+    "x": 275,
+    "y": 156,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffЗламане прокляття духу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 6^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff50,55,60,65,70,75,80,85,90,95\n^ffffffЗменшує випадкові характеристики цілі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_乱魂咒",
+    "x": 275,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffХаос душі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 7^2c6629 Дерево 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗмушує ціль тікати.\n^e910cdОбмеження по класу - друїд",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_升龙气",
+    "x": 275,
+    "y": 236,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВзліт дракона\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНаносить цілі фізичний шкоду вогнем, \nтакож лякає її, зменшуючи захист.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_放逐",
+    "x": 315,
+    "y": 156,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffПосилання\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5^15b2d9 Вода 6\n^ffffffВивчається на рівнях:  ^ffffff52,57,62,67,72,77,82,87,92,97\n^ffffffДає членам команди імунітет від фізичної шкоди, \nале може запечатати гравця.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_炎闪",
+    "x": 315,
+    "y": 236,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffСяюча блискавка\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 6^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНаносить ближнім противникам шкоду вогнем, \nє шанс випадкового ефекту.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_信念",
+    "x": 315,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffВпевненість\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНа короткий час дає імунітет до всіх негативних заклять.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_未知技能7",
+    "x": -33355,
+    "y": 276,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_9级",
+    "x": 30,
+    "y": 83,
+    "w": 91,
+    "h": 21,
+    "text": "9 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_Title",
+    "x": 152,
+    "y": 9,
+    "w": 224,
+    "h": 28,
+    "text": "Додаткові вміння",
+    "font": "方正隶二简体",
+    "size": 16,
+    "color": null,
+    "bold": false
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_11级",
+    "x": 30,
+    "y": 162,
+    "w": 93,
+    "h": 22,
+    "text": "11 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_12级",
+    "x": 30,
+    "y": 203,
+    "w": 130,
+    "h": 23,
+    "text": "12 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_13级",
+    "x": 30,
+    "y": 243,
+    "w": 124,
+    "h": 26,
+    "text": "13 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_14级",
+    "x": 30,
+    "y": 286,
+    "w": 149,
+    "h": 24,
+    "text": "14 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_16级",
+    "x": 30,
+    "y": -3362,
+    "w": 100,
+    "h": 21,
+    "text": "16 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Junior",
+    "x": 409,
+    "y": 394,
+    "w": 88,
+    "h": 24,
+    "text": "Початкові",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true,
+    "img": {
+     "FrameUpImage": "ui/tex/27120413eb52.png",
+     "FrameDownImage": "ui/tex/27120413eb52.png",
+     "FrameOnHoverImage": "ui/tex/3b9fd714f1dc.png"
+    },
+    "tex": [
+     76,
+     24
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能6",
+    "x": -33157,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能5",
+    "x": -33157,
+    "y": 238,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_元气盗窃",
+    "x": 197,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffКрадіжка життя\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 7^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗабирає ЖС цілі, відновлюючи власну ЖС, \nале потім швидко відновлює ЖС цілі.",
+    "img": {
+     "FrameImage": "ui/tex/3492f18f264c.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_群嘲",
+    "x": 237,
+    "y": 78,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffКровна помста\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5^8b570e Земля 4\n^ffffffВивчається на рівнях:  ^ffffff40,45,50,55,60,65,70,75,80,85\n^ffffffБ'є силою ненависті по найближчим супротивникам \nі відображає фізичний шкоду по собі в ближньому бою.",
+    "img": {
+     "FrameImage": "ui/tex/35a4d8fe9e13.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_凤舞",
+    "x": 197,
+    "y": 198,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffТанець феніксів\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 4^15b2d9 Вода 4^d7131d Вогонь 4\n^ffffffВивчається на рівнях:  ^ffffff55,60,65,70,75,80,85,90,95,99\n^ffffffНаносить шкоду всім ближнім ворогам, \nзменшує силу атаки.\n^e910cdОбмеження по класу - стрілець",
+    "img": {
+     "FrameImage": "ui/tex/e9b8fee98961.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能4",
+    "x": 197,
+    "y": 158,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_潜能激发",
+    "x": 197,
+    "y": 118,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffУдар сили\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 5^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff45,50,55,60,65,70,75,80,85,90\n^ffffffЄ шанс усыпити ціль, запечатати, обмежити швидкість, зменшити імунітет.",
+    "img": {
+     "FrameImage": "ui/tex/fd1e8f527527.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_寒冰领域",
+    "x": 237,
+    "y": 158,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЛьодовик\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6^8b570e Земля 5\n^ffffffВивчається на рівнях:  ^ffffff52,57,62,67,72,77,82,87,92,97\n^ffffffЗупиняє ціль, \nзменшує її швидкість атаки і читання заклинань.\n^e910cdВикористовується тільки у воді.",
+    "img": {
+     "FrameImage": "ui/tex/b4cc13986c51.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_法师之星",
+    "x": 277,
+    "y": 78,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗірка майстра\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 3^d7131d Вогонь 3^8b570e Земля 3\n^ffffffВивчається на рівнях:  ^ffffff41,46,51,56,61,66,71,76,81,86\n^ffffffЧастина ЖС передається в швидкість, \nпоглинається магічний шкоду.\n^e910cdОбмеження за класом - маг",
+    "img": {
+     "FrameImage": "ui/tex/be8e68661ba5.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_冰暴",
+    "x": 237,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЛедяний шторм\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗменшує максимальну кількість ЖС цілі та найближчих супротивників.",
+    "img": {
+     "FrameImage": "ui/tex/e18a9a27bb35.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_荆棘之怒",
+    "x": 237,
+    "y": 238,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffШип гніву\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 6^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНайближчі противники отримують шкоду деревом, \nтакож зменшується їх ЖС.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/772152358150.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_虚弱咒",
+    "x": 237,
+    "y": 118,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffСлабкі чари\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5^15b2d9 Вода 5\n^ffffffВивчається на рівнях:  ^ffffff46,51,56,61,66,71,76,81,86,91\n^ffffffЗменшує швидкість атаки цілі.",
+    "img": {
+     "FrameImage": "ui/tex/ca7aba39a2e9.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_绝对领域",
+    "x": 237,
+    "y": 198,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffСфера Абсолюту\n^ffffffМаксимальний рівень: 10\n^ffffffВимога до елемента: ^f7df12Метал4^15b2d9Вода4^8b570eЗемля4\n^ffffffВводить вас у стан неуразливості, \nзатем додатково обмежує переміщення.",
+    "img": {
+     "FrameImage": "ui/tex/b2cdff279191.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_水火符",
+    "x": 277,
+    "y": 118,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗнак води і вогню\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 5^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff47,52,57,62,67,72,77,82,87,92\n^ffffffЦіль отримує шкоду водою і вогнем, \nє шанс зменшити ЖС цілі і зупинити її.",
+    "img": {
+     "FrameImage": "ui/tex/4b597c14a8c7.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能2",
+    "x": 317,
+    "y": 78,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能3",
+    "x": 317,
+    "y": 118,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_灵气爆发",
+    "x": 277,
+    "y": 198,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffСпалах енергії\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал 7^8b570e Земля 5\n^ffffffВивчається на рівнях: ^ffffff55,60,65,70,75,80,85,90,95,99\n^ffffffЗбільшує запас ци.",
+    "img": {
+     "FrameImage": "ui/tex/db8f9c09b2b5.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_破魔咒",
+    "x": 277,
+    "y": 158,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffЗламане прокляття духу\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 6^d7131d Вогонь 5\n^ffffffВивчається на рівнях:  ^ffffff50,55,60,65,70,75,80,85,90,95\n^ffffffЗменшує випадкові характеристики цілі.",
+    "img": {
+     "FrameImage": "ui/tex/1b13741914d6.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_乱魂咒",
+    "x": 277,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffХаос душі\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 7^2c6629 Дерево 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffЗмушує ціль тікати.\n^e910cdОбмеження по класу - друїд",
+    "img": {
+     "FrameImage": "ui/tex/5fcc026cfdc3.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_升龙气",
+    "x": 277,
+    "y": 238,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВзліт дракона\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^15b2d9 Вода 6^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНаносить цілі фізичний шкоду вогнем, \nтакож лякає її, зменшуючи захист.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/c287af27f75f.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_放逐",
+    "x": 317,
+    "y": 158,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffПосилання\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^f7df12Метал 5^15b2d9 Вода 6\n^ffffffВивчається на рівнях:  ^ffffff52,57,62,67,72,77,82,87,92,97\n^ffffffДає членам команди імунітет від фізичної шкоди, \nале може запечатати гравця.",
+    "img": {
+     "FrameImage": "ui/tex/67c464c7beb2.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_炎闪",
+    "x": 317,
+    "y": 238,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffСяюча блискавка\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^d7131d Вогонь 6^8b570e Земля 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНаносить ближнім противникам шкоду вогнем, \nє шанс випадкового ефекту.\n^e910cdВикористовується тільки на землі.",
+    "img": {
+     "FrameImage": "ui/tex/95b299295aa1.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_信念",
+    "x": 317,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffВпевненість\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 7^d7131d Вогонь 7\n^ffffffВивчається на рівнях:  ^ffffff60,65,70,75,80,85,90,95,99,99\n^ffffffНа короткий час дає імунітет до всіх негативних заклять.",
+    "img": {
+     "FrameImage": "ui/tex/931b93c7d648.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_未知技能7",
+    "x": -33357,
+    "y": 278,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffНе відкрито",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_10级",
+    "x": 30,
+    "y": 123,
+    "w": 117,
+    "h": 23,
+    "text": "10 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_15级",
+    "x": 30,
+    "y": -3325,
+    "w": 142,
+    "h": 24,
+    "text": "15 Рівень:",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#fceacc",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_尚未开放1",
+    "x": 149,
+    "y": -3325,
+    "w": 63,
+    "h": 22,
+    "text": "Закрито",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#ff0000",
+    "bold": true
+   },
+   {
+    "type": "LABEL",
+    "name": "Lbl_尚未开放",
+    "x": 148,
+    "y": -3362,
+    "w": 95,
+    "h": 27,
+    "text": "Закрито",
+    "font": "方正细黑一简体",
+    "size": 10,
+    "color": "#ff0000",
+    "bold": true
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_倍返",
+    "x": 355,
+    "y": 76,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffПодвійний повернення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5^15b2d9 Вода 3^d7131d Вогонь 1\n^ffffffВивчається на рівнях:  ^ffffff11,16,21,26,31,36,41,46,51,56\n^ffffffЗбільшує магічний шкоду, \nдіє на союзників.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_倍返",
+    "x": 357,
+    "y": 78,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffПодвійний повернення\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента:  ^2c6629 Дерево 5^15b2d9 Вода 3^d7131d Вогонь 1\n^ffffffВивчається на рівнях:  ^ffffff11,16,21,26,31,36,41,46,51,56\n^ffffffЗбільшує магічний шкоду, \nдіє на союзників.\n^e910cdОбмеження за класом - перевертень",
+    "img": {
+     "FrameImage": "ui/tex/e485e2f5ee78.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill_平衡",
+    "x": 197,
+    "y": 78,
+    "w": 30,
+    "h": 30,
+    "hint": "^ffffffРівновага\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал 4^d7131dВогонь 5\n^ffffffВивчається на рівнях: ^ffffff41,46,51,56,61,66,71,76,81,86\n^ffffffДозволяє створити щит.\nЯкщо ваша фізична захист вища магічної,\nто щит буде відбивати шкоду від заклинань;\nякщо ваша магічна захист вища фізичної,\nто щит буде відбивати фізичну шкоду.\nПоки щит цілий, персонаж неуразливий.\n^e910cdУміння доступне тільки воїну.",
+    "img": {
+     "FrameImage": "ui/tex/50a36f447215.png"
+    },
+    "tex": [
+     32,
+     32
+    ]
+   },
+   {
+    "type": "IMAGEPICTURE",
+    "name": "Skill2_平衡",
+    "x": 195,
+    "y": 76,
+    "w": 34,
+    "h": 34,
+    "hint": "^ffffffРівновага\n^ffffffМакс. рівень 10\n^ffffffВимога до елемента: ^f7df12Метал 4^d7131dВогонь 5\n^ffffffВивчається на рівнях: ^ffffff41,46,51,56,61,66,71,76,81,86\n^ffffffДозволяє створити щит.\nЯкщо ваша фізична захист вища магічної,\nто щит буде відбивати шкоду від заклинань;\nякщо ваша магічна захист вища фізичної,\nто щит буде відбивати фізичну шкоду.\nПоки щит цілий, персонаж неуразливий.\n^e910cdУміння доступне тільки воїну.",
+    "img": {
+     "FrameImage": "ui/tex/104e973b0e45.png"
+    },
+    "tex": [
+     34,
+     34
+    ]
+   },
+   {
+    "type": "STILLIMAGEBUTTON",
+    "name": "Btn_Close",
+    "x": 491,
+    "y": 22,
+    "w": 20,
+    "h": 20,
+    "text": null,
+    "font": "方正细黑一简体",
+    "size": 12,
+    "color": null,
+    "bold": false,
+    "img": {
+     "FrameUpImage": "ui/tex/a136c63858ed.png",
+     "FrameDownImage": "ui/tex/9113834f67ca.png",
+     "FrameOnHoverImage": "ui/tex/01103651b0cd.png"
+    },
+    "tex": [
+     20,
+     20
+    ]
+   }
+  ]
+ }
+}
