@@ -8,6 +8,14 @@
    simple linear rules, so the bonus is computed here from the genie's current stats (equipment included). */
 const INFLUENCE_STAT = { 'сили': 'strength', 'спритності': 'agility' };
 const DOWN = /зниж|зменш|скороч|послаб|сниж|умен/i;
+const CHANCE = /імовір|ймовір|шанс|вероятн/i;
+/** «З імовірністю 100%», «шанс критичного удару на 2%» — the number is the chance itself
+ *  (no verb between the chance word and the number); «з імовірністю зменшує … на 4%» is an effect. */
+function isChanceNum(n) {
+  if (n.unit !== '%') return false;
+  const m = n.before.match(/(?:імовір|ймовір|шанс|вероятн)[^]*$/i);
+  return !!m && !VERB.test(m[0].replace(/^\S+/, ''));
+}
 
 /** «кожне очко збільшує шкоду на 10,2 од.» → { per: 1, value: 10.2, unit: 'од.', sign: +1 } */
 function parseInfluence(clause) {
@@ -27,7 +35,9 @@ const unitOf = (u) => (u === '%' ? '%' : /^сек/.test(u) ? 'сек' : /^од/.
 const ruleObject = (clause) => clause.replace(/^.*?(?:оч|бал)\S*\s+(?:додатково\s+)?\S+\s+/i, '')
   .split(/\s(?:ще|на|по)\s/)[0].replace(/[.,;]+$/, '').trim();
 function ruleStems(clause) {
-  return ruleObject(clause).toLowerCase().split(/[^а-яіїєґ']+/).filter((w) => w.length >= 4).map((w) => w.slice(0, 4));
+  // 4-letter stems; a 4-letter word gives 3 letters so «щита» still finds «щит»
+  return ruleObject(clause).toLowerCase().split(/[^а-яіїєґ']+/).filter((w) => w.length >= 4)
+    .map((w) => w.slice(0, w.length === 4 ? 3 : 4));
 }
 const VERB = /[а-яіїєґ](?:ує|юють|ують|ють|ить|ять|ає|ають|ється|уються)(?:\s|$)/i;
 
@@ -71,7 +81,10 @@ function withInfluence(raw, stats) {
     ruleLines[li] = { statKey, st, items: parts.map((p, i) => {
       const mag = (p.per > 1 ? Math.floor(st / p.per) : st) * p.value;
       const unit = unitOf(p.unit), stems = ruleStems(clauses[i]);
-      const fits = nums.filter((n) => n.unit === unit || (unit === 'од' && !n.unit && /енерг|витрат/.test(n.line)));
+      // a chance («з імовірністю 100%») only takes rules about chances
+      const aboutChance = CHANCE.test(clauses[i]);
+      const fits = nums.filter((n) => (n.unit === unit || (unit === 'од' && !n.unit && /енерг|витрат/.test(n.line)))
+        && (aboutChance || !isChanceNum(n)));
       const words = (n) => stems.filter((st4) => new RegExp(`(^|[^а-яіїєґ])${st4}`).test(n.line)).length;
       const score = (n) => words(n) * 4 + (DOWN.test(n.before) === p.sign < 0 ? 2 : 0) - n.uses * 3;
       // candidates: lines with the rule's words, plus the next/previous line when the direction agrees
@@ -80,7 +93,8 @@ function withInfluence(raw, stats) {
       const cands = fits.filter((n) => words(n) > 0
         || ((hit.has(n.li - 1) || hit.has(n.li + 1)) && DOWN.test(n.before) === p.sign < 0));
       let target = cands.sort((a, b) => score(b) - score(a))[0];
-      if (!target) { const d = fits.filter((n) => n.desc); if (d.length === 1) [target] = d; }
+      // the only number of the description — if it goes the same way as the rule («збільшує» / «зменшує»)
+      if (!target) { const d = fits.filter((n) => n.desc); if (d.length === 1 && DOWN.test(d[0].before) === p.sign < 0) [target] = d; }
       let targets = target ? [target] : [];
       // durations («час дії», «час уповільнення і прискорення»): the effect times «на N сек.» of the text —
       // the first one, or all of them when the rule names several effects
@@ -100,7 +114,7 @@ function withInfluence(raw, stats) {
     const baseDown = DOWN.test(n.before);
     const sum = n.deltas.reduce((t, d) => t + (isCost ? (d.down ? -d.mag : d.mag) : (d.down === baseDown ? d.mag : -d.mag)), 0);
     let total = Math.max(0, n.value + sum);
-    if (n.unit === '%' && (/ймовір|шанс/.test(n.line) || baseDown)) total = Math.min(100, total);   // chances and reductions ≤ 100%
+    if (n.unit === '%' && (isChanceNum(n) || baseDown)) total = Math.min(100, total);   // chances and reductions ≤ 100%
     const dec = (n.text.split(',')[1] || '').length;
     const fmt = (x) => x.toLocaleString('uk-UA', { minimumFractionDigits: dec, maximumFractionDigits: Math.max(dec, 2) });
     const u = n.unit === '%' ? '%' : n.unit ? `${n.ws}${n.unitText}` : '';   // the unit as written («сек.», «секунд»)
