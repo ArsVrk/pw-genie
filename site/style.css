@@ -669,3 +669,22 @@ footer.site-foot { flex-shrink: 0; }
 .pb-cform input { grid-column: 1 / -1; font: inherit; padding: .25rem .5rem; }
 .pb-cform textarea { font: inherit; padding: .25rem .5rem; resize: vertical; }
 .pb-cform button { align-self: end; padding: .3rem .8rem; }
+
+/* the player's build open in the calculator */
+.c-build { margin-top: 16px; padding: 14px 16px; border: 1px solid #6b5420; border-radius: 12px;
+  background: linear-gradient(180deg, #2c2414, var(--panel)); max-width: 1000px; margin-left: auto; margin-right: auto; }
+.cb-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.c-build .tag { font-size: .72rem; padding: 0 7px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); }
+.c-build .tag.mode { color: #fff; border-color: #6b5935; background: #3b311f; }
+.c-build .tag.cls { color: var(--gold-2); }
+.c-build .tag.warn { color: #ff8a6a; border-color: #ff8a6a; }
+.c-build .pb-lv { margin-left: 4px; }
+.cb-act { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+.cb-act button { padding: 0 .55rem; }
+.c-build .pb-comment { margin: 10px 0 0; }
+.c-build .pb-cmts { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.c-build .pb-cmts h3 { margin: 0; font-size: 1rem; color: #f8d9a0; }
+.c-build .pb-cmts h3 small { color: var(--muted); font-weight: 400; }
+.c-build .pb-clist { max-height: 420px; }
+a.ilink { word-break: break-all; }
+.btn-link.dim { opacity: .85; }

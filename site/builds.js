@@ -5,7 +5,7 @@
 
 const BUILD_CLASSES = ['Воїн', 'Маг', 'Жрець', 'Друїд', 'Перевертень', 'Вбивця', 'Лучник', 'Страж', 'Шаман', 'Містик'];
 const PB = { list: [], cats: ['ПвП', 'ПвЕ'], editId: null, loaded: false, error: '',
-  comments: {}, cmtOn: false, open: new Set() };   // comments by build id; cmtOn = the comments table exists
+  comments: {}, cmtOn: false, ver: 0 };   // comments by build id; cmtOn = the comments table exists
 
 /* ---------- storage of the author's secret and own builds (this browser only) ---------- */
 const store = {
@@ -53,6 +53,7 @@ async function loadBuilds() {
     PB.cmtOn = true;
   } catch { PB.cmtOn = false; }
   PB.loaded = true;
+  PB.ver++;
 }
 
 /* ---------- a build's genie from its calculator state (without touching the calculator) ---------- */
@@ -87,7 +88,25 @@ function buildGenieTooltip(id) {
   return lines.join('\n');
 }
 
+/* ---------- text with clickable links (links to this site open in place, as a short label) ---------- */
+const SITE_URL = 'https://arsvrk.github.io/pw-genie/';
+function linkify(text) {
+  return esc(text).replace(/https?:\/\/[^\s<]+/g, (u) => {
+    const raw = u.replace(/&amp;/g, '&').replace(/[.,;:!?)]+$/, '');
+    const tail = u.slice(esc(raw).length);
+    const own = raw.startsWith(SITE_URL) || raw.startsWith(location.origin + location.pathname);
+    if (own && raw.includes('#')) {
+      const hash = raw.slice(raw.indexOf('#'));
+      const label = hash.startsWith('#calc/') ? 'білд у калькуляторі' : hash.startsWith('#skill/') ? 'опис скіла' : 'сторінка сайту';
+      return `<a class="ilink" href="${esc(hash)}">🔗 ${label}</a>${tail}`;
+    }
+    const label = raw.length > 48 ? `${raw.slice(0, 45)}…` : raw;
+    return `<a class="ilink" href="${esc(raw)}" target="_blank" rel="noopener nofollow ugc">${esc(label)}</a>${tail}`;
+  });
+}
+
 /* ---------- the list in «Білди» ---------- */
+const buildHref = (b) => `#calc/${esc(b.state)}&amp;b=${b.id}`;
 function playerBuildCard(b) {
   const bg = buildGenie(b.state);
   const date = new Date(b.updated_at || b.created_at).toLocaleDateString('uk-UA');
@@ -100,11 +119,11 @@ function playerBuildCard(b) {
         <div class="pb-skills">${bg.skills.map((sid) => `<a href="#skill/${sid}" data-tip="gtree:${sid}"><img src="${iconSrc(sid)}" alt="">
           <i>${skillLevelOf(bg, sid)}</i></a>`).join('')}</div></div>
     </div>
-    ${b.comment ? `<p class="pb-comment">${esc(b.comment)}</p>` : ''}
-    ${PB.cmtOn ? commentsBlock(b) : ''}
+    ${b.comment ? `<p class="pb-comment">${linkify(b.comment)}</p>` : ''}
     <div class="b-foot"><span class="muted">${date}</span><span class="pb-act">
       ${isMine(b.id) ? '<button type="button" class="ghost" data-act="edit">Редагувати</button><button type="button" class="ghost" data-act="del">Видалити</button>' : ''}
-      <a class="btn-link" href="#calc/${esc(b.state)}">У калькулятор →</a></span></div>
+      ${PB.cmtOn ? `<a class="btn-link dim" data-act="cmts" href="${buildHref(b)}&amp;c=1" title="Коментарі — у калькуляторі під білдом">💬 ${(PB.comments[b.id] || []).length}</a>` : ''}
+      <a class="btn-link" href="${buildHref(b)}">У калькулятор →</a></span></div>
   </article>`;
 }
 
@@ -112,15 +131,15 @@ function commentsBlock(b) {
   const list = PB.comments[b.id] || [];
   const mine = myComments();
   const last = store.get('pwg_last', {});
-  return `<details class="pb-cmts"${PB.open.has(b.id) ? ' open' : ''}><summary>Коментарі (${list.length})</summary>
+  return `<div class="pb-cmts"><h3>Коментарі <small>${list.length}</small></h3>
     <div class="pb-clist">${list.map((c) => `<div class="pb-c" data-cid="${c.id}"><div><b>${esc(c.nick)}</b>
       <span class="muted">${new Date(c.created_at).toLocaleString('uk-UA', { dateStyle: 'short', timeStyle: 'short' })}</span>
       ${mine.includes(c.id) ? '<button type="button" class="pb-cdel" data-act="cdel" title="Видалити свій коментар">×</button>' : ''}</div>
-      <p>${esc(c.text)}</p></div>`).join('') || '<p class="muted">Поки немає коментарів.</p>'}</div>
+      <p>${linkify(c.text)}</p></div>`).join('') || '<p class="muted">Поки немає коментарів.</p>'}</div>
     <form class="pb-cform"><input name="nick" maxlength="32" placeholder="Нік" value="${esc(last.nick || '')}" required>
       <textarea name="text" maxlength="500" rows="2" placeholder="Ваш коментар…" required></textarea>
       <button type="submit">Надіслати</button></form>
-  </details>`;
+  </div>`;
 }
 
 function renderPlayerBuilds() {
@@ -144,11 +163,7 @@ function renderPlayerBuilds() {
       <div id="pb-list" class="builds"></div>`;
     ['#pb-cls', '#pb-cat', '#pb-q'].forEach((q) => $(q).addEventListener('input', renderPlayerBuilds));
     $('#pb-list').addEventListener('click', onBuildAction);
-    $('#pb-list').addEventListener('submit', onCommentSubmit);
-    $('#pb-list').addEventListener('toggle', (ev) => {   // keep comments open across re-renders
-      const card = ev.target.closest?.('.pbuild');
-      if (card && ev.target.matches('.pb-cmts')) PB.open[ev.target.open ? 'add' : 'delete'](card.dataset.id);
-    }, true);
+
   }
   const cat = $('#pb-cat'), cur = cat.value;
   cat.innerHTML = `<option value="">усі</option>${PB.cats.map((c) => `<option>${esc(c)}</option>`).join('')}`;
@@ -161,11 +176,15 @@ function renderPlayerBuilds() {
 async function onBuildAction(ev) {
   const btn = ev.target.closest('[data-act]');
   if (!btn) return;
-  const id = btn.closest('.pbuild').dataset.id;
+  const id = btn.closest('[data-id]').dataset.id;
   const b = PB.list.find((x) => x.id === id);
-  if (btn.dataset.act === 'edit') {
+  if (btn.dataset.act === 'cmts') {   // the link navigates; then show the comments under the calculator
+    setTimeout(() => $('#c-build').scrollIntoView({ behavior: 'smooth' }), 350);
+  } else if (btn.dataset.act === 'close') {
+    C.build = ''; renderCalc();
+  } else if (btn.dataset.act === 'edit') {
     PB.editId = id;
-    location.hash = `calc/${b.state}`;
+    location.hash = `calc/${b.state}&b=${id}`;
     setTimeout(() => openSaveBuild(b), 300);
   } else if (btn.dataset.act === 'cdel') {
     const cid = btn.closest('.pb-c').dataset.cid;
@@ -173,7 +192,7 @@ async function onBuildAction(ev) {
     try {
       await sb('rpc/delete_comment', { method: 'POST', body: JSON.stringify({ p_id: cid, p_secret: mySecret() }) });
       store.set('pwg_own_c', myComments().filter((x) => x !== cid));
-      await loadBuilds(); renderPlayerBuilds();
+      await loadBuilds(); renderPlayerBuilds(); renderCalcBuild();
     } catch (e) { alert(`Не вдалося видалити: ${e.message}`); }
   } else if (btn.dataset.act === 'del') {
     if (!confirm(`Видалити білд «${b.nick} · ${b.category}»? Повернути не можна.`)) return;
@@ -189,7 +208,7 @@ async function onCommentSubmit(ev) {
   const form = ev.target.closest('.pb-cform');
   if (!form) return;
   ev.preventDefault();
-  const id = form.closest('.pbuild').dataset.id;
+  const id = form.closest('[data-id]').dataset.id;
   const nick = form.nick.value.trim(), text = form.text.value.trim();
   if (!nick || !text) return;
   const btn = form.querySelector('button');
@@ -198,8 +217,8 @@ async function onCommentSubmit(ev) {
     const cid = await sb('rpc/add_comment', { method: 'POST', body: JSON.stringify({ p_build: id, p_secret: mySecret(), p_nick: nick, p_text: text }) });
     store.set('pwg_own_c', [...myComments(), cid]);
     store.set('pwg_last', { ...store.get('pwg_last', {}), nick });
-    PB.open.add(id);
-    await loadBuilds(); renderPlayerBuilds();
+    await loadBuilds(); renderPlayerBuilds(); renderCalcBuild();
+    $('#c-build .pb-clist')?.lastElementChild?.scrollIntoView({ block: 'nearest' });
   } catch (e) { alert(`Не вдалося надіслати: ${e.message}`); btn.disabled = false; }
 }
 
@@ -207,6 +226,7 @@ async function onCommentSubmit(ev) {
 function openSaveBuild(edit = null) {
   const dlg = $('#build-dlg');
   if (!sbOn()) { alert('Збереження білдів ще не підключене. Поки що можна поділитися посиланням.'); return; }
+  if (!edit && !PB.editId && C.build && isMine(C.build)) PB.editId = C.build;   // own build open in the calculator
   if (!edit && PB.editId) edit = PB.list.find((x) => x.id === PB.editId) || null;
   const last = store.get('pwg_last', {});
   $('#bd-nick').value = edit?.nick || last.nick || '';
@@ -245,11 +265,12 @@ async function submitBuild(ev) {
   try {
     const id = await sb('rpc/save_build', { method: 'POST', body: JSON.stringify({
       p_id: update ? PB.editId : null, p_secret: mySecret(), p_nick: nick, p_class: $('#bd-class').value,
-      p_category: category, p_level: C.level, p_genie: C.genie, p_skills: C.skills, p_state: saveCalcState(),
+      p_category: category, p_level: C.level, p_genie: C.genie, p_skills: C.skills, p_state: saveCalcState({ withBuild: false }),
       p_comment: $('#bd-comment').value.trim() }) });
     store.set('pwg_own', [...new Set([...myBuilds(), id])]);
     store.set('pwg_last', { nick, class: $('#bd-class').value });
     PB.editId = null;
+    C.build = id;
     $('#build-dlg').close();
     await loadBuilds();
     renderPlayerBuilds();
@@ -259,7 +280,33 @@ async function submitBuild(ev) {
   } finally { btn.disabled = false; }
 }
 
+/* ---------- the player's build open in the calculator: author's note + comments under the windows ---------- */
+let calcBuildKey = '';
+function renderCalcBuild() {
+  const box = $('#c-build');
+  if (!box) return;
+  const b = C.build && PB.list.find((x) => x.id === C.build);
+  if (!b) { box.hidden = true; calcBuildKey = ''; return; }
+  const key = `${b.id}|${PB.ver}`;
+  if (key !== calcBuildKey) {   // re-render only when the build or the data changed (keeps typed text)
+    calcBuildKey = key;
+    box.dataset.id = b.id;
+    box.innerHTML = `<div class="cb-head"><span class="muted">Білд гравця</span> <b class="pb-nick">${esc(b.nick)}</b>
+        <span class="tag cls">${esc(b.class)}</span><span class="tag mode">${esc(b.category)}</span>
+        <span class="pb-lv">Рів. ${b.level}</span>
+        <span class="tag warn cb-changed" title="Можна зберегти як новий білд${isMine(b.id) ? ' або оновити свій' : ''} кнопкою «Зберегти»">змінено</span>
+        <span class="cb-act"><a class="btn-link" href="#builds">До білдів</a>
+        <button type="button" class="ghost" data-act="close" title="Закрити — далі звичайний калькулятор">×</button></span></div>
+      ${b.comment ? `<p class="pb-comment">${linkify(b.comment)}</p>` : ''}
+      ${PB.cmtOn ? commentsBlock(b) : ''}`;
+  }
+  box.querySelector('.cb-changed').hidden = saveCalcState({ withBuild: false }) === b.state;
+  box.hidden = false;
+}
+
 async function initPlayerBuilds() {
+  $('#c-build').addEventListener('click', onBuildAction);
+  $('#c-build').addEventListener('submit', onCommentSubmit);
   $('#bd-cat').addEventListener('change', () => {
     $('#bd-newcat').hidden = $('#bd-cat').value !== '__new';
     if (!$('#bd-newcat').hidden) $('#bd-newcat').focus();
@@ -269,4 +316,6 @@ async function initPlayerBuilds() {
   renderPlayerBuilds();
   await loadBuilds();
   renderPlayerBuilds();
+  renderCalcBuild();
+  if (/[&?]c=1/.test(location.hash)) $('#c-build').scrollIntoView({ behavior: 'smooth' });
 }

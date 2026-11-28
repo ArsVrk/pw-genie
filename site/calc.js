@@ -317,7 +317,7 @@ async function initCalc() {
   };
   $('#c-reset').onclick = () => {
     Object.assign(C, { level: 1, lp: 0, form: 0, rolls: [], alloc: [0, 0, 0, 0], elems: [0, 0, 0, 0, 0],
-      equip: { jade: 0, amulet: 0, mirror: 0, pearl: 0 }, skills: [] });
+      equip: { jade: 0, amulet: 0, mirror: 0, pearl: 0 }, skills: [], build: '' });
     renderCalc();
   };
   initEquipPicker();
@@ -503,6 +503,7 @@ function renderCalc() {
   renderTreeState();
   if ($('#eq-dlg').open) renderEquipPicker();
   if (calcReady && location.hash.startsWith('#calc')) history.replaceState(null, '', `#calc/${saveCalcState()}`);
+  if (typeof renderCalcBuild === 'function') renderCalcBuild();
 }
 
 /* ---------- equipment picker (opens from the empty slots in «Предмет») ---------- */
@@ -545,7 +546,8 @@ function renderEquipPicker() {
 }
 
 /* ---------- URL state ---------- */
-function saveCalcState() {
+/** The calculator state as URL params. withBuild: keep «b» — the id of the player's build this state came from. */
+function saveCalcState({ withBuild = true } = {}) {
   const p = new URLSearchParams({
     g: C.genie, l: C.level, lp: C.lp, s: C.alloc.join(','), e: C.elems.join(','),
     q: SLOTS.map((s) => C.equip[s]).join(','), k: C.skills.join(','),
@@ -553,6 +555,7 @@ function saveCalcState() {
   if (C.form) p.set('f', C.form);
   const kl = C.skills.filter((id) => C.skillLv?.[id]).map((id) => `${id}:${C.skillLv[id]}`).join(',');
   if (kl) p.set('kl', kl);
+  if (withBuild && C.build) p.set('b', C.build);
   return p.toString().replace(/%2C/g, ',').replace(/%3A/g, ':');
 }
 function loadCalcState(str) {
@@ -571,5 +574,6 @@ function loadCalcState(str) {
   C.skills = (p.get('k') || '').split(',').map(Number).filter((id) => BY_ID[id]).slice(0, 8);
   C.skillLv = Object.fromEntries((p.get('kl') || '').split(',').map((x) => x.split(':').map(Number))
     .filter(([id, lv]) => BY_ID[id] && lv > 0));
+  C.build = /^[0-9a-f-]{36}$/.test(p.get('b') || '') ? p.get('b') : '';
   renderCalc();
 }
